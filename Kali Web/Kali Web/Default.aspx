@@ -3,38 +3,39 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1>Kali Web</h1>
+        <p class="lead">Kali Web is a Web Application which allows students to use security tools which are included in the Kali Linux distribution with a simple to use user interface.</p>
+        <p><a href="Account/Login.aspx" class="btn btn-primary btn-lg">Get Started &raquo;</a></p>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
+            <h2>Our Company</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                Angie Programming is a startup company with the vision of simplifying learning. Our debut product Kali Web is the start of our vision to spend more time on learning and less on logistics.
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
+            <h2>Contact Us</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
+                Angie Programming Pte Ltd.<br />
+                53 Ubi Avenue 1<br />
+                Paya Ubi Industrial Park<br />
+                Singapore 408934
             </p>
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                Email: AngieChu@angieprogramming.com.sg<br />
+                Tel No.: +6598521467
+            </p>
+            <p>
+                Operating Hours (Mon - Fri): 9am - 9pm
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
+            <h2>About Kali Linux</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                Kali Web is a website where you can use security testing tools without the need to install anything extra.
+                To login, click <a href="Account/Register.aspx">here</a>! Accounts are strictly created by your school administrator. Contact your school's administrator to create an account.
             </p>
         </div>
     </div>
