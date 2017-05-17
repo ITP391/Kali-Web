@@ -14,7 +14,7 @@
                         </p>
                     </asp:PlaceHolder>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">IP Address</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="IP" CssClass="col-md-2 control-label">IP Address</asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="IP" CssClass="form-control" />
                         </div>

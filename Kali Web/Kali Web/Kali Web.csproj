@@ -186,6 +186,18 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Security Binaries\Nmap\3rd-party-licenses.txt" />
+    <Content Include="Security Binaries\Nmap\libeay32.dll" />
+    <Content Include="Security Binaries\Nmap\ncat.exe" />
+    <Content Include="Security Binaries\Nmap\ndiff.py" />
+    <Content Include="Security Binaries\Nmap\nmap-update.exe" />
+    <Content Include="Security Binaries\Nmap\nmap.exe" />
+    <Content Include="Security Binaries\Nmap\nmap.xsl" />
+    <Content Include="Security Binaries\Nmap\npcap-0.78-r5.exe" />
+    <Content Include="Security Binaries\Nmap\nping.exe" />
+    <Content Include="Security Binaries\Nmap\ssleay32.dll" />
+    <Content Include="Security Binaries\Nmap\vcredist2008_x86.exe" />
+    <Content Include="Security Binaries\Nmap\vcredist_x86.exe" />
     <Content Include="Security Tools\HomeStud.aspx" />
     <Content Include="Security Tools\nmap.aspx" />
     <Content Include="Security Tools\Recon.aspx" />
@@ -288,11 +300,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Security Binaries\" />
+    <Folder Include="Security Binaries\Nmap\licenses\" />
+    <Folder Include="Security Binaries\Nmap\nselib\" />
+    <Folder Include="Security Binaries\Nmap\scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Security Binaries\Nmap\ca-bundle.crt" />
+    <Content Include="Security Binaries\Nmap\CHANGELOG" />
+    <Content Include="Security Binaries\Nmap\COPYING" />
+    <Content Include="Security Binaries\Nmap\ndiff.bat" />
+    <Content Include="Security Binaries\Nmap\NDIFF_README" />
+    <Content Include="Security Binaries\Nmap\nmap-mac-prefixes" />
+    <Content Include="Security Binaries\Nmap\nmap-os-db" />
+    <Content Include="Security Binaries\Nmap\nmap-payloads" />
+    <Content Include="Security Binaries\Nmap\nmap-protocols" />
+    <Content Include="Security Binaries\Nmap\nmap-rpc" />
+    <Content Include="Security Binaries\Nmap\nmap-service-probes" />
+    <Content Include="Security Binaries\Nmap\nmap-services" />
+    <Content Include="Security Binaries\Nmap\nmap_performance.reg" />
+    <Content Include="Security Binaries\Nmap\nse_main.lua" />
+    <Content Include="Security Binaries\Nmap\README-WIN32" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
