@@ -11,7 +11,17 @@ namespace Kali_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            NotLoggedIn.Visible = false;
+            LoggedIn.Visible = false;
 
+            if (Session["email"] != null)
+            {
+                LoggedIn.Visible = true;
+            }
+            else
+            {
+                NotLoggedIn.Visible = true;
+            }
         }
     }
 }

@@ -6,13 +6,20 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Kali Web</title>
+    <title><%: Page.Title %> - Dear Diary</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
+        
+        <%--Add CSS and JAVASCRIPT reference for all page--%> 
+        <link href="/Content/css/style.css" rel="stylesheet" />
+        <link href="/Content/css/owl.carousel.min.css" rel="stylesheet" />
+        <link href="/Content/css/owl.theme.default.css" rel="stylesheet" />
+        <script src="../Content/js/jquery-1.11.0.min.js"></script>
+        
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -20,7 +27,7 @@
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
@@ -40,33 +47,70 @@
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+            <div class="container body-content">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Kali Web</a>
+                    <a class="color-white" runat="server" href="/Default.aspx" id="Logo">Kali Web</a>
                 </div>
-                <div class="navbar-collapse collapse">
+
+                <div class="navbar-collapse">
+                    <div>
+
+                        <div class="menu-bar">
+                            <%-- For list of all menu --%>
+                            <div id="NotLoggedIn" runat="server"> 
+                                    <div class="left home">
+                                        <h2 class="cust-menu-h2"><a href="/Default.aspx" style="padding-left: 40px;">Home</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/About.aspx" style="padding-left: 20px;">About</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/Contact.aspx" style="padding-left: 20px;">Contact</a></h2>
+                                    </div>
+                                    <div class="icon-list right">
+                                        <p>You are not logged in</p>
+                                     </div>
+                             </div>
+                            <div id="LoggedIn" runat="server">
+                                <div class="left home">
+                                        <h2 class="cust-menu-h2"><a href="/Default.aspx" style="padding-left: 40px;">Home</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/About.aspx" style="padding-left: 20px;">About</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/Security Tools/HomeStud.aspx" style="padding-left: 20px;">Security Tools</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/Security Tools/HomeLect.aspx" style="padding-left: 20px;">Security Tools</a></h2>
+                                    </div>
+                                    <div class="icon-list right">
+                                <ul>
+                                    <li><a href="/Account/Register.aspx" title="Add Friends">Create Student Account></a></li>
+                                    <li><a href="/Default.aspx" title="Logout"><img src="/Content/img/logout-small.png" alt="Logout" title="Logout" /></a></li>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                     </div>
+                </div>
+
+                <%-- <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
-                </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a runat="server" href="~/Account/Login">Get Started</a></li>
+                    </ul>
+                </div>--%>
             </div>
         </div>
-        <div class="container body-content">
+        <div class="container body-content" style="background-color: white; border-radius: 13px; padding-top: 30px;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            <footer class="clear">
+
+                <div class="footer">
+                    <%--<a href="#">&copy; 2017 ALL RIGHT RESERVED </a>--%>
+                    <p>Angie Programming &copy; <%: DateTime.Now.Year %></p>
+                    <p><a class="cust-footer-color" runat="server" href="~/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="cust-footer-color" href="~/About.aspx">About</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="cust-footer-color" href="~/Contact.aspx">Contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="cust-footer-color" href="~/Privacy.aspx">Privacy Policy</a></p>
+                </div>
             </footer>
         </div>
-
     </form>
 </body>
 </html>

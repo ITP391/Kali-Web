@@ -137,6 +137,14 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\owl.carousel.min.css" />
+    <Content Include="Content\css\owl.theme.default.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\logout-small.png" />
+    <Content Include="Content\img\logout.png" />
+    <Content Include="Content\js\jquery-1.11.0.min.js" />
+    <Content Include="Content\js\owl.carousel.js" />
+    <Content Include="Content\js\owl.carousel.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -148,6 +156,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\font\Heaven Matters Personal Use.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -177,6 +186,9 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Security Tools\HomeStud.aspx" />
+    <Content Include="Security Tools\nmap.aspx" />
+    <Content Include="Security Tools\Recon.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -232,6 +244,27 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security Tools\HomeStud.aspx.cs">
+      <DependentUpon>HomeStud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\HomeStud.aspx.designer.cs">
+      <DependentUpon>HomeStud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\nmap.aspx.cs">
+      <DependentUpon>nmap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\nmap.aspx.designer.cs">
+      <DependentUpon>nmap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\Recon.aspx.cs">
+      <DependentUpon>Recon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\Recon.aspx.designer.cs">
+      <DependentUpon>Recon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,7 +288,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Security Tools\" />
+    <Folder Include="Security Binaries\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
