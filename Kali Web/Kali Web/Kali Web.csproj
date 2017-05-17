@@ -308,8 +308,9 @@
     <Content Include="Security Binaries\Wireshark\ws.css" />
     <Content Include="Security Binaries\Wireshark\zlib1.dll" />
     <Content Include="Security Tools\HomeStud.aspx" />
-    <Content Include="Security Tools\Submenu\Exploit.aspx" />
+    <Content Include="Security Tools\Submenu\PassAttack.aspx" />
     <Content Include="Security Tools\Tool UI\Hashcat.aspx" />
+    <Content Include="Security Tools\Tool UI\ncrack.aspx" />
     <Content Include="Security Tools\Tool UI\nmap.aspx" />
     <Content Include="Security Tools\Submenu\Recon.aspx" />
     <Content Include="Security Tools\Submenu\Vulnerable.aspx" />
@@ -376,12 +377,12 @@
     <Compile Include="Security Tools\HomeStud.aspx.designer.cs">
       <DependentUpon>HomeStud.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Exploit.aspx.cs">
-      <DependentUpon>Exploit.aspx</DependentUpon>
+    <Compile Include="Security Tools\Submenu\PassAttack.aspx.cs">
+      <DependentUpon>PassAttack.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Exploit.aspx.designer.cs">
-      <DependentUpon>Exploit.aspx</DependentUpon>
+    <Compile Include="Security Tools\Submenu\PassAttack.aspx.designer.cs">
+      <DependentUpon>PassAttack.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Tool UI\Hashcat.aspx.cs">
       <DependentUpon>Hashcat.aspx</DependentUpon>
@@ -389,6 +390,13 @@
     </Compile>
     <Compile Include="Security Tools\Tool UI\Hashcat.aspx.designer.cs">
       <DependentUpon>Hashcat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\ncrack.aspx.cs">
+      <DependentUpon>ncrack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\ncrack.aspx.designer.cs">
+      <DependentUpon>ncrack.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Tool UI\nmap.aspx.cs">
       <DependentUpon>nmap.aspx</DependentUpon>
