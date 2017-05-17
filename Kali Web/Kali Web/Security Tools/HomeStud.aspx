@@ -7,7 +7,7 @@
                 Tools included in this category are used to gather information usually before an attack is commenced
             </p>
             <p>
-                <a href="Recon.aspx">Click Here for the tool</a>
+                <a href="/Security Tools/Submenu/Recon.aspx">Click Here for the tool</a>
             </p>
         </div>
         <div class="col-md-4">
@@ -16,16 +16,16 @@
                 Tools included in this category are used to analyse for vulnerabilities in the target
             </p>
             <p>
-                <a href="Vulnerable.aspx">Click Here for the tool</a>
+                <a href="/Security Tools/Submenu/Vulnerable.aspx">Click Here for the tool</a>
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Stress Testing</h2>
+            <h2>Exploitation</h2>
             <p>
-                Tools included in this category are used to stress test targets
+                Tools included in this category are used to exploit known vulnerabilities
             </p>
             <p>
-                <a href="Stress.aspx">Click Here for the tool</a>
+                <a href="/Security Tools/Submenu/Exploit.aspx">Click Here for the tool</a>
             </p>
         </div>
     </div>
