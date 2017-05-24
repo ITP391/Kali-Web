@@ -20,12 +20,12 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Exploitation</h2>
+            <h2>Password Attack</h2>
             <p>
-                Tools included in this category are used to exploit known vulnerabilities
+                Tools included in this category are used to crack passwords
             </p>
             <p>
-                <a href="/Security Tools/Submenu/Exploit.aspx">Click Here for the tool</a>
+                <a href="/Security Tools/Submenu/PassAttack.aspx">Click Here for the tool</a>
             </p>
         </div>
     </div>
