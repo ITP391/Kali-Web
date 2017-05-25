@@ -314,6 +314,7 @@
     <Content Include="Security Tools\Tool UI\nmap.aspx" />
     <Content Include="Security Tools\Submenu\Recon.aspx" />
     <Content Include="Security Tools\Submenu\Vulnerable.aspx" />
+    <Content Include="Security Tools\Tool UI\SSHNmap.aspx" />
     <Content Include="Security Tools\Tool UI\Wireshark.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
@@ -418,6 +419,13 @@
     </Compile>
     <Compile Include="Security Tools\Submenu\Vulnerable.aspx.designer.cs">
       <DependentUpon>Vulnerable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\SSHNmap.aspx.cs">
+      <DependentUpon>SSHNmap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\SSHNmap.aspx.designer.cs">
+      <DependentUpon>SSHNmap.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Tool UI\Wireshark.aspx.cs">
       <DependentUpon>Wireshark.aspx</DependentUpon>
