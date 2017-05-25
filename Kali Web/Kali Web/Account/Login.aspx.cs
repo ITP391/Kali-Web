@@ -72,8 +72,8 @@ namespace Kali_Web.Account
 
                     //Session["email"] = TextBox1.Text;
 
-                    Response.Redirect("/Account/SecurityHome.aspx");
-                    //REDIRECT TO SECURITY HOME
+                    Response.Redirect("/Security Tools/HomeStud.aspx");
+                    //Response.Redirect("/Security Tools/HomeLect.aspx");
                 }
 
                 //Either email/password wrong, shows this

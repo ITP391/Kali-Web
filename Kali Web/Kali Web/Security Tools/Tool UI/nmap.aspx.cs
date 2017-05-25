@@ -17,9 +17,10 @@ namespace Kali_Web.Security_Tools
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process si = new System.Diagnostics.Process();
-            //si.StartInfo.WorkingDirectory = "~/Security Binaries/Nmap";
+            //si.StartInfo.WorkingDirectory = "~/Security Binaries/Nmap/";
             si.StartInfo.UseShellExecute = false;
-            si.StartInfo.FileName = "C:\\Users\\155126N\\Source\\Repos\\Kali-Web\\Kali Web\\Kali Web\\Security Binaries\\Nmap\\nmap.exe"; //NEED TO CHANGE THE FILE PATH FOR EVERYONE'S COMPUTER
+            //si.StartInfo.FileName = "~/Security Binaries/Nmap/nmap.exe";
+            si.StartInfo.FileName = "C:\\Tmp\\Kali-Web\\Nmap\\nmap.exe"; //NEED TO CHANGE THE FILE PATH FOR EVERYONE'S COMPUTER
             si.StartInfo.Arguments = "/c nmap 127.0.0.1";
             si.StartInfo.CreateNoWindow = true;
             si.StartInfo.RedirectStandardInput = true;
