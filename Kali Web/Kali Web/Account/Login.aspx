@@ -55,10 +55,7 @@
 
             <div class="form-group">
                 <div class="col-xs-8 col-xs-offset-3">
-    <a href="/Account/Register">Register as a new user</a>
     <br />
-    <%--Insert link of /Account/ForgotPassword (forgot password page) here--%>
-    <a href="/Account/ForgotPassword">Forgot password</a>
                    </div>
             </div>
         </div>

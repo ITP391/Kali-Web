@@ -39,8 +39,6 @@ namespace Kali_Web.Account
 
                 String dbEmail = "";
                 String dbPassword = "";
-                String dbMobile = "";
-                String dbCount = "";
                 String dbSalt = "";
 
                 myConnection.Open();
