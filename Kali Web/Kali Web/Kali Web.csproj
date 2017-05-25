@@ -218,6 +218,7 @@
     <Content Include="Security Binaries\oclHashcat\OpenCL\inc_hash_constants.h" />
     <Content Include="Security Binaries\oclHashcat\OpenCL\inc_rp.h" />
     <Content Include="Security Binaries\oclHashcat\WeakPassword.txt" />
+    <Content Include="Security Binaries\plink\plink.exe" />
     <Content Include="Security Binaries\Wireshark\capinfos.exe" />
     <Content Include="Security Binaries\Wireshark\capinfos.html" />
     <Content Include="Security Binaries\Wireshark\comerr64.dll" />
