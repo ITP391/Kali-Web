@@ -47,7 +47,7 @@
 
             <div class="form-group">
                 <div class="col-xs-8 col-xs-offset-3">
-                    <asp:Button ID="Button1" runat="server" class="btn btn-success" Text="Log in" OnClick="Login_Click" />
+                    <asp:Button ID="Button1" runat="server" class="btn btn-custom" Text="Log in" OnClick="Login_Click" />
                 </div>
             </div>
             <br />

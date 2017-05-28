@@ -63,7 +63,7 @@
                                         <h2 class="cust-menu-h2"><a href="/About.aspx" style="padding-left: 20px;">About</a></h2>
                                         <h2 class="cust-menu-h2"><a href="/Contact.aspx" style="padding-left: 20px;">Contact</a></h2>
                                     </div>
-                                    <div class="icon-list right">
+                                    <div class="icon-list right white-text">
                                         <p>You are not logged in</p>
                                      </div>
                              </div>

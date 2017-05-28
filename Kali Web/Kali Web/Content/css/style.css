@@ -1,7 +1,7 @@
 body{
     margin:0 auto;
     text-align:center;
-    background-color: #f4cea7 !important;
+    background-color: #B0C4DE !important;
     margin-bottom: 50px;
 }
 @font-face {
@@ -34,7 +34,7 @@ body{
     margin:0 auto;
     margin-top:25px;
     border-radius: 10px 10px 0px 0px;
-    background: #AF5D5F;
+    background: #4682B4;
 }
 .name-logo{
 }
@@ -197,7 +197,7 @@ body{
 .footer{
     padding: 10px 0px;
     border-radius: 0px 0px 10px 10px;
-    background: #AF5D5F; 
+    background: #4682B4; 
 }
 .footer a{
     text-decoration: none;
@@ -784,7 +784,7 @@ body{
       margin:0 auto;
       width:80%; 
       margin-bottom: 10px;
-      color: #af5d5f;
+      color: #4682B4	;
 }
 .comment-post{
       margin:15px auto;
@@ -794,7 +794,7 @@ body{
 }
 .comment-box{
       width:98.8%;
-      border: 1px solid #af5d5f;
+      border: 1px solid #4682B4	;
       min-height: 25px;
       text-align: left;
       line-height: 24.5px;
@@ -812,7 +812,7 @@ body{
 .comment-text{
       margin:15px auto;
       width:80%;
-      border: 1px solid #af5d5f;
+      border: 1px solid #4682B4	;
       margin-bottom: 20px;
       border-radius: 10px;
       overflow: hidden;
@@ -894,7 +894,7 @@ body{
       padding: 10px;
 }
 .notif:hover {
-      border:2px solid #AF5D5F;
+      border:2px solid #4682B4	;
 }
 .notif:hover   .btn-notif{
       display: block;
@@ -919,7 +919,7 @@ body{
 .btn-notif button{
       border: none;
       background:transparent;
-      color:#AF5D5F
+      color: #4682B4;	
 }
 
 .home .cust-menu-h2{
@@ -956,8 +956,8 @@ body{
 }
 
 .navbar-inverse {
-    background-color: #f4cea7 !important;
-    border-color: #f4cea7 !important;
+    background-color: #B0C4DE !important;
+    border-color: #B0C4DE !important;
 }
 
 .cust-footer-color{

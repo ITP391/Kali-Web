@@ -5,10 +5,10 @@
     <div class="jumbotron">
         <h1>Kali Web</h1>
         <p class="lead">Kali Web is a Web Application which allows students to use security tools which are included in the Kali Linux distribution with a simple to use user interface.</p>
-        <p><a href="Account/Login.aspx" class="btn btn-primary btn-lg">Get Started &raquo;</a></p>
+        <p><a href="Account/Login.aspx" class="btn btn-custom btn-lg">Get Started &raquo;</a></p>
     </div>
 
-    <div class="row">
+    <div class="row main-content">
         <div class="col-md-4">
             <h2>Our Company</h2>
             <p>
