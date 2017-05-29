@@ -309,7 +309,9 @@
     <Content Include="Security Binaries\Wireshark\wireshark.html" />
     <Content Include="Security Binaries\Wireshark\ws.css" />
     <Content Include="Security Binaries\Wireshark\zlib1.dll" />
+    <Content Include="Security Tools\HomeLect.aspx" />
     <Content Include="Security Tools\HomeStud.aspx" />
+    <Content Include="Security Tools\StudList.aspx" />
     <Content Include="Security Tools\Submenu\PassAttack.aspx" />
     <Content Include="Security Tools\Tool UI\Hashcat.aspx" />
     <Content Include="Security Tools\Tool UI\ncrack.aspx" />
@@ -373,12 +375,26 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security Tools\HomeLect.aspx.cs">
+      <DependentUpon>HomeLect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\HomeLect.aspx.designer.cs">
+      <DependentUpon>HomeLect.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Security Tools\HomeStud.aspx.cs">
       <DependentUpon>HomeStud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Security Tools\HomeStud.aspx.designer.cs">
       <DependentUpon>HomeStud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\StudList.aspx.cs">
+      <DependentUpon>StudList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\StudList.aspx.designer.cs">
+      <DependentUpon>StudList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Submenu\PassAttack.aspx.cs">
       <DependentUpon>PassAttack.aspx</DependentUpon>
