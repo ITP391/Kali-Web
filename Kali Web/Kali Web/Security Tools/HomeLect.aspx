@@ -32,5 +32,21 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="box">
+                <div class="ribbon ribbon-orange">Quiz Completion</div>
+                <div class="box-content">
+                    <p>Test</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="box">
+                <div class="ribbon ribbon-blue">Student Permissions</div>
+                <div class="box-content">
+                    <p>Test</p>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>
