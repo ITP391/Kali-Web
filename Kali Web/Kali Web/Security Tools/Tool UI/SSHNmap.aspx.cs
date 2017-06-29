@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Renci.SshNet;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -35,64 +36,27 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
             Output.Text = output; */
 
-            String feedback = RequestInfo("192.168.127.146", "root", "root", new string[] { "nmap 172.0.0.1" }); //Enter command in array
+            Output.Text = "";
 
-            Output.Text = feedback;
-        }
+            String host = "192.168.127.151";
+            String user = "root";
+            String password = "root";
+            String userinputip = IP.Text;
 
-        public string RequestInfo(string remoteHost, string userName, string password, string[] lstCommands)
-        {
-            m_szFeedback = "Feedback from: " + remoteHost + "\r\n";
+            SshClient ssh = new SshClient(host, user, password);
 
-            ProcessStartInfo psi = new ProcessStartInfo()
+            using (var client = new SshClient(host, user, password))
             {
-                FileName = "C:\\Tmp\\Kali-Web\\plink\\plink.exe", // A const or a readonly string that points to the plink executable
-                Arguments = String.Format("-ssh {0}@{1} -pw {2}", userName, remoteHost, password),
-                RedirectStandardError = true,
-                RedirectStandardOutput = true,
-                RedirectStandardInput = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
+                client.Connect();
 
-            Process p = Process.Start(psi);
+                Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n";
+            
+                var terminal = client.RunCommand("nmap " + userinputip);
 
-            m_objLock = new Object();
-            m_blnDoRead = true;
+                var output = terminal.Result;
 
-            AsyncReadFeedback(p.StandardOutput); // start the async read of stdout
-            AsyncReadFeedback(p.StandardError); // start the async read of stderr
-
-            StreamWriter strw = p.StandardInput;
-
-            foreach (string cmd in lstCommands)
-            {
-                strw.WriteLine(cmd); // send commands
-            }
-            strw.WriteLine("exit"); // send exit command at the end
-
-            p.WaitForExit(); // block thread until remote operations are done
-            return m_szFeedback;
-        }
-
-        private String m_szFeedback; // hold feedback data
-        private Object m_objLock; // lock object
-        private Boolean m_blnDoRead; // boolean value keeping up the read (may be used to interrupt the reading process)
-
-        public void AsyncReadFeedback(StreamReader strr)
-        {
-            Thread trdr = new Thread(new ParameterizedThreadStart(__ctReadFeedback));
-            trdr.Start(strr);
-        }
-        private void __ctReadFeedback(Object objStreamReader)
-        {
-            StreamReader strr = (StreamReader)objStreamReader;
-            string line;
-            while (!strr.EndOfStream && m_blnDoRead)
-            {
-                line = strr.ReadLine();
-                // lock the feedback buffer (since we don't want some messy stdout/err mix string in the end)
-                lock (m_objLock) { m_szFeedback += line + "\r\n"; }
+                Output.Text += output;
+                client.Disconnect();
             }
         }
     }

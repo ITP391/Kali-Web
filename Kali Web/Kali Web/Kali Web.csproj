@@ -48,6 +48,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\..\..\..\..\..\..\Tmp\Kali-Web\plink\Renci.SshNet.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -318,6 +321,7 @@
     <Content Include="Security Tools\Tool UI\nmap.aspx" />
     <Content Include="Security Tools\Submenu\Recon.aspx" />
     <Content Include="Security Tools\Submenu\Vulnerable.aspx" />
+    <Content Include="Security Tools\Tool UI\ping.aspx" />
     <Content Include="Security Tools\Tool UI\SSHNmap.aspx" />
     <Content Include="Security Tools\Tool UI\Wireshark.aspx" />
     <Content Include="Site.Master" />
@@ -437,6 +441,13 @@
     </Compile>
     <Compile Include="Security Tools\Submenu\Vulnerable.aspx.designer.cs">
       <DependentUpon>Vulnerable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\ping.aspx.cs">
+      <DependentUpon>ping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\ping.aspx.designer.cs">
+      <DependentUpon>ping.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Tool UI\SSHNmap.aspx.cs">
       <DependentUpon>SSHNmap.aspx</DependentUpon>
