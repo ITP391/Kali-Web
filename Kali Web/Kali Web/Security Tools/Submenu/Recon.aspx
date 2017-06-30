@@ -28,9 +28,10 @@
         <div class="col-md-4">
              <div class="box box-large">
                  <%-- Ribbon container of a box --%>  
-                <div class="ribbon ribbon-orange">Coming Soon!</div>
+                <div class="ribbon ribbon-orange">Ping</div>
                 <div class="box-content">
-                    <p>     A new tool is being developed and tested and will arrive shortly!</p>
+                    <p>ping is a computer network administration software utility used to test the reachability of a host on an Internet Protocol (IP) network. It measures the round-trip time for messages sent from the originating host to a destination computer that are echoed back to the source.</p>
+                    <p class="tool-link"><a href="/Security Tools/Tool UI/ping.aspx" class="button">Click Here for the tool</a> </p>
                 </div>
             </div>
         </div>
