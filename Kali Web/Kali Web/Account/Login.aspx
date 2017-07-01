@@ -41,7 +41,7 @@
 
             <div class="form-group">
                 <div class="col-xs-8 col-xs-offset-3">
-                    <asp:CheckBox ID="CheckBox1" runat="server" Text=" Remember Me?" />
+                    <!--<asp:CheckBox ID="CheckBox1" runat="server" Text=" Remember Me?" />-->
                 </div>
             </div>
 

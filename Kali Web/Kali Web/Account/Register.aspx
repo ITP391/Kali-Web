@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Kali_Web.Account.Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <br />
-    <asp:Label Font-Size="30px" ID="Label1" runat="server" Text="Register. "></asp:Label>
+    <asp:Label Font-Size="30px" ID="Label1" runat="server" Text="Register"></asp:Label>
     <br />
-    <asp:Label runat="server" Text="Create a new account. " ID="Label2"></asp:Label>
+    <h3><asp:Label runat="server" Text="INTERNAL USE ONLY" ID="Label2"></asp:Label></h3>
     <hr />
     <br />
 
