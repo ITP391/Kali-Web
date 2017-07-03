@@ -317,6 +317,7 @@
     <Content Include="Security Tools\HomeStud.aspx" />
     <Content Include="Security Tools\StudList.aspx" />
     <Content Include="Security Tools\Submenu\PassAttack.aspx" />
+    <Content Include="Security Tools\Submenu\Quizes.aspx" />
     <Content Include="Security Tools\Submenu\SSHRecon.aspx" />
     <Content Include="Security Tools\Tool UI\Hashcat.aspx" />
     <Content Include="Security Tools\Tool UI\ncrack.aspx" />
@@ -410,6 +411,13 @@
     </Compile>
     <Compile Include="Security Tools\Submenu\PassAttack.aspx.designer.cs">
       <DependentUpon>PassAttack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\Submenu\Quizes.aspx.cs">
+      <DependentUpon>Quizes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\Submenu\Quizes.aspx.designer.cs">
+      <DependentUpon>Quizes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Submenu\SSHRecon.aspx.cs">
       <DependentUpon>SSHRecon.aspx</DependentUpon>
