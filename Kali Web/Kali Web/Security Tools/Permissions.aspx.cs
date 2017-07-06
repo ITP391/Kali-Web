@@ -22,7 +22,7 @@ namespace Kali_Web.Security_Tools
                 string query = "SELECT * FROM [User] WHERE [Permission] = @Student";
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myCommand.CommandType = CommandType.Text;
-                myCommand.Parameters.AddWithValue("@email", inputemail);
+                //myCommand.Parameters.AddWithValue("@email", inputemail);
 
 
                 SqlDataReader reader = myCommand.ExecuteReader();

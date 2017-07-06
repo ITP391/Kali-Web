@@ -85,8 +85,8 @@ namespace Kali_Web.Account
                     {
                         Label10.Text = "";
 
-                        string query = "INSERT INTO [dbo].[User](Email_Address, FName, LName, Password, Phone_Number, Salt, Permission)";
-                        query += " VALUES (@Email, @FName, @LName, @Password, @PhoneNumber, @Salt, @Permission)";
+                        string query = "INSERT INTO [dbo].[User](Email_Address, FName, LName, Password, Phone_Number, Salt, Permission, IGAccess, VAAccess, PWAccess)";
+                        query += " VALUES (@Email, @FName, @LName, @Password, @PhoneNumber, @Salt, @Permission, @IGAccess, @VAAccess, @PWAccess)";
                         SqlCommand myCommand = new SqlCommand(query, myConnection);
 
                         //To prevent sql injection
@@ -97,6 +97,9 @@ namespace Kali_Web.Account
                         myCommand.Parameters.AddWithValue("PhoneNumber", phonenumber);
                         myCommand.Parameters.AddWithValue("Salt", Convert.ToBase64String(salt));
                         myCommand.Parameters.AddWithValue("Permission", "student");
+                        myCommand.Parameters.AddWithValue("IGAccess", 0);
+                        myCommand.Parameters.AddWithValue("VAAccess", 0);
+                        myCommand.Parameters.AddWithValue("PWAccess", 0);
 
                         myCommand.ExecuteNonQuery();
                         Response.Redirect("/Account/SuccessfulRegistration");
