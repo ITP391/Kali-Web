@@ -40,6 +40,9 @@ namespace Kali_Web.Account
                 String dbEmail = "";
                 String dbPassword = "";
                 String dbSalt = "";
+                String dbFName = "";
+                String dbLName = "";
+                String dbPermission = "";
 
                 myConnection.Open();
 
@@ -57,6 +60,9 @@ namespace Kali_Web.Account
                     dbEmail = reader["Email_Address"].ToString();
                     dbPassword = reader["Password"].ToString();
                     dbSalt = reader["Salt"].ToString();
+                    dbFName = reader["FName"].ToString();
+                    dbLName = reader["LName"].ToString();
+                    dbPermission = reader["Permission"].ToString();
 
                 }
 
@@ -69,8 +75,20 @@ namespace Kali_Web.Account
                 {
 
                     //Session["email"] = TextBox1.Text;
+                    String name = dbFName + " " + dbLName;
+                    String permission = dbPermission;
 
-                    Response.Redirect("/Security Tools/HomeStud.aspx");
+                    Session["name"] = name;
+                    Session["permission"] = permission;
+                    
+                    if (dbPermission == "student")
+                    {
+                        Response.Redirect("/Security Tools/HomeStud.aspx");
+                    }
+                    else if (dbPermission == "lecturer")
+                    {
+                        Response.Redirect("/Security Tools/HomeLect.aspx");
+                    }
                     //Response.Redirect("/Security Tools/HomeLect.aspx");
                 }
 

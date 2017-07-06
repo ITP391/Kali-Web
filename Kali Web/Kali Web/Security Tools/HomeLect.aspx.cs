@@ -11,7 +11,16 @@ namespace Kali_Web.Security_Tools
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            String permission = (String) Session["permission"];
 
+            if (permission == null || permission == "")
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
+            else if (permission == "student")
+            {
+                Response.Redirect("/Security Tools/HomeStud.aspx");
+            }
         }
     }
 }

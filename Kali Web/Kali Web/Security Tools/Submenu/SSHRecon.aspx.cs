@@ -11,7 +11,6 @@ namespace Kali_Web.Security_Tools.Submenu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
