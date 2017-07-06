@@ -50,11 +50,11 @@
         </div>
         <div class="col-md-4">
             <div class="box">
-                <div class="ribbon ribbon-blue">Server Terminal</div>
+                <div class="ribbon ribbon-blue">Server Tools</div>
                 <div class="box-content">
-                    <p>A full terminal with SSH access to the server</p>
+                    <p>A few preset administrative commands to send to the server</p>
                     <p class="tool-link">          
-                        <a href="/Security Tools/Tool UI/SSHClient.aspx" class="button">Click Here for the tool</a>
+                        <a href="/Security Tools/Tool UI/ServerTools.aspx" class="button">Click Here for the tool</a>
                     </p>
                 </div>
             </div>

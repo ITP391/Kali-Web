@@ -31,15 +31,6 @@ namespace Kali_Web.Security_Tools.Tool_UI {
         protected global::System.Web.UI.WebControls.Literal FailureText;
         
         /// <summary>
-        /// Input control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input;
-        
-        /// <summary>
         /// Output control.
         /// </summary>
         /// <remarks>
