@@ -19,10 +19,10 @@ namespace Kali_Web.Security_Tools
             {
                 myConnection.Open();
 
-                string query = "SELECT * FROM [User] WHERE [Permission] = @Student";
+                string query = "SELECT * FROM [User] WHERE [Permission] = @Permission";
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myCommand.CommandType = CommandType.Text;
-                //myCommand.Parameters.AddWithValue("@email", inputemail);
+                myCommand.Parameters.AddWithValue("@Permission", "student");
 
 
                 SqlDataReader reader = myCommand.ExecuteReader();
