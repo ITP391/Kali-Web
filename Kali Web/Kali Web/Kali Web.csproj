@@ -315,7 +315,7 @@
     <Content Include="Security Binaries\Wireshark\zlib1.dll" />
     <Content Include="Security Tools\HomeLect.aspx" />
     <Content Include="Security Tools\HomeStud.aspx" />
-    <Content Include="Security Tools\StudList.aspx" />
+    <Content Include="Security Tools\Permissions.aspx" />
     <Content Include="Security Tools\Submenu\PassAttack.aspx" />
     <Content Include="Security Tools\Submenu\Quizes.aspx" />
     <Content Include="Security Tools\Submenu\SSHRecon.aspx" />
@@ -398,12 +398,12 @@
     <Compile Include="Security Tools\HomeStud.aspx.designer.cs">
       <DependentUpon>HomeStud.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\StudList.aspx.cs">
-      <DependentUpon>StudList.aspx</DependentUpon>
+    <Compile Include="Security Tools\Permissions.aspx.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\StudList.aspx.designer.cs">
-      <DependentUpon>StudList.aspx</DependentUpon>
+    <Compile Include="Security Tools\Permissions.aspx.designer.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Submenu\PassAttack.aspx.cs">
       <DependentUpon>PassAttack.aspx</DependentUpon>
