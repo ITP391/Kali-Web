@@ -325,9 +325,9 @@
     <Content Include="Security Tools\Submenu\Recon.aspx" />
     <Content Include="Security Tools\Submenu\Vulnerable.aspx" />
     <Content Include="Security Tools\Tool UI\ping.aspx" />
-    <Content Include="Security Tools\Tool UI\SSHClient.aspx" />
     <Content Include="Security Tools\Tool UI\SSHNmap.aspx" />
     <Content Include="Security Tools\Tool UI\SSHPing.aspx" />
+    <Content Include="Security Tools\Tool UI\SSHTerminal.aspx" />
     <Content Include="Security Tools\Tool UI\SSHWireshark.aspx" />
     <Content Include="Security Tools\Tool UI\Wireshark.aspx" />
     <Content Include="Site.Master" />
@@ -469,13 +469,6 @@
     <Compile Include="Security Tools\Tool UI\ping.aspx.designer.cs">
       <DependentUpon>ping.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHClient.aspx.cs">
-      <DependentUpon>SSHClient.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHClient.aspx.designer.cs">
-      <DependentUpon>SSHClient.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Security Tools\Tool UI\SSHNmap.aspx.cs">
       <DependentUpon>SSHNmap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -489,6 +482,13 @@
     </Compile>
     <Compile Include="Security Tools\Tool UI\SSHPing.aspx.designer.cs">
       <DependentUpon>SSHPing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\SSHTerminal.aspx.cs">
+      <DependentUpon>SSHTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\SSHTerminal.aspx.designer.cs">
+      <DependentUpon>SSHTerminal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Tool UI\SSHWireshark.aspx.cs">
       <DependentUpon>SSHWireshark.aspx</DependentUpon>
