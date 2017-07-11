@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Configuration;
 using System.Web.UI.WebControls;
 
 namespace Kali_Web.Security_Tools
@@ -27,6 +28,19 @@ namespace Kali_Web.Security_Tools
 
                 SqlDataReader reader = myCommand.ExecuteReader();
 
+            }
+        }
+
+        protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                CheckBox checkBox1 = e.Row.FindControl("IGAcc") as CheckBox;
+                CheckBox checkBox2 = e.Row.FindControl("VAA") as CheckBox;
+                CheckBox checkBox3 = e.Row.FindControl("PWA") as CheckBox;
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
             }
         }
     }
