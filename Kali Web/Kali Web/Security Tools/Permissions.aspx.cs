@@ -51,10 +51,28 @@ namespace Kali_Web.Security_Tools
                 CheckBox checkBox1 = row1.FindControl("IGAcc") as CheckBox;
                 CheckBox checkBox2 = row1.FindControl("VAA") as CheckBox;
                 CheckBox checkBox3 = row1.FindControl("PWA") as CheckBox;
-                String Id = row1.FindControl("Id").ToString();
+                String Id = row1.Cells[0].Text; ;
                 Boolean IGAccess = checkBox1.Checked;
                 Boolean VAAccess = checkBox2.Checked;
-                Boolean PWAccess = checkBox3.Checked; ;
+                Boolean PWAccess = checkBox3.Checked;
+
+                int IGA = 0;
+                int VAA = 0;
+                int PWA = 0;
+
+                if (checkBox1.Checked == true)
+                {
+                    IGA = 1;
+                }
+                else if (checkBox2.Checked == true)
+                {
+                    VAA = 1;
+                }
+                else if (checkBox3.Checked == true)
+                {
+                    PWA = 1;
+                }
+                
 
                 SqlConnection myConnection;
                 using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
@@ -65,9 +83,9 @@ namespace Kali_Web.Security_Tools
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     myCommand.CommandType = CommandType.Text;
                     myCommand.Parameters.AddWithValue("@Id", Id);
-                    myCommand.Parameters.AddWithValue("IGAccess", IGAccess);
-                    myCommand.Parameters.AddWithValue("@VAAccess", VAAccess);
-                    myCommand.Parameters.AddWithValue("@PWAccess", PWAccess);
+                    myCommand.Parameters.AddWithValue("IGAccess", IGA);
+                    myCommand.Parameters.AddWithValue("@VAAccess", VAA);
+                    myCommand.Parameters.AddWithValue("@PWAccess", PWA);
                 }
             }
         }
