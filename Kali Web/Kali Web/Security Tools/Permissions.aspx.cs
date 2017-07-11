@@ -60,17 +60,19 @@ namespace Kali_Web.Security_Tools
                 int VAA = 0;
                 int PWA = 0;
 
-                if (checkBox1.Checked == true)
+                if (IGAccess == true)
                 {
                     IGA = 1;
-                }
-                else if (checkBox2.Checked == true)
-                {
-                    VAA = 1;
-                }
-                else if (checkBox3.Checked == true)
-                {
-                    PWA = 1;
+                    
+                    if (VAAccess == true)
+                    {
+                        VAA = 1;
+                        
+                        if (PWAccess == true)
+                        {
+                            PWA = 1;
+                        }
+                    }
                 }
                 
 
@@ -83,9 +85,11 @@ namespace Kali_Web.Security_Tools
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     myCommand.CommandType = CommandType.Text;
                     myCommand.Parameters.AddWithValue("@Id", Id);
-                    myCommand.Parameters.AddWithValue("IGAccess", IGA);
-                    myCommand.Parameters.AddWithValue("@VAAccess", VAA);
-                    myCommand.Parameters.AddWithValue("@PWAccess", PWA);
+                    myCommand.Parameters.AddWithValue("IGAccess", checkBox1.Checked);
+                    myCommand.Parameters.AddWithValue("@VAAccess", checkBox2.Checked);
+                    myCommand.Parameters.AddWithValue("@PWAccess", checkBox3.Checked);
+
+                    myCommand.ExecuteNonQuery();
                 }
             }
         }
