@@ -43,5 +43,33 @@ namespace Kali_Web.Security_Tools
                 checkBox3.Enabled = true;
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            foreach (GridViewRow row1 in GridView1.Rows)
+            {
+                CheckBox checkBox1 = row1.FindControl("IGAcc") as CheckBox;
+                CheckBox checkBox2 = row1.FindControl("VAA") as CheckBox;
+                CheckBox checkBox3 = row1.FindControl("PWA") as CheckBox;
+                String Id = row1.FindControl("Id").ToString();
+                Boolean IGAccess = checkBox1.Checked;
+                Boolean VAAccess = checkBox2.Checked;
+                Boolean PWAccess = checkBox3.Checked; ;
+
+                SqlConnection myConnection;
+                using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+                {
+                    myConnection.Open();
+
+                    string query = "UPDATE [User] SET [IGAccess] = @IGAccess, [VAAccess] = @VAAccess, [PWAccess] = @PWAccess WHERE [Id] = @Id";
+                    SqlCommand myCommand = new SqlCommand(query, myConnection);
+                    myCommand.CommandType = CommandType.Text;
+                    myCommand.Parameters.AddWithValue("@Id", Id);
+                    myCommand.Parameters.AddWithValue("IGAccess", IGAccess);
+                    myCommand.Parameters.AddWithValue("@VAAccess", VAAccess);
+                    myCommand.Parameters.AddWithValue("@PWAccess", PWAccess);
+                }
+            }
+        }
     }
 }
