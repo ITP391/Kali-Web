@@ -8,7 +8,7 @@
                 <div class="ribbon ribbon-blue">Nmap</div>
                 <div class="box-content">
                     <p>Nmap (Network Mapper) is a security scanner used to discover hosts and services on a computer network, thus building a "map" of the network. To accomplish its goal, Nmap sends specially crafted packets to the target host(s) and then analyzes the responses. This verson of the tool scans only for open ports. For a more in depth scan, use the Nmap scan in the Vulnerability section.</p>
-                    <p class="tool-link"><a href="/Security Tools/Tool UI/SSHNmap.aspx" class="button">Click Here for the tool</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/SSH/SSHNmap.aspx" class="button">Click Here for the tool</a> </p>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
                 <div class="ribbon ribbon-green">Wireshark Terminal</div>
                 <div class="box-content">
                     <p>Wireshark is a free and open source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education. Originally named Ethereal, the project was renamed Wireshark in May 2006 due to trademark issues.</p>
-                    <p class="tool-link"><a href="/Security Tools/Tool UI/SSHWireshark.aspx" class="button">Click Here for the tool</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/SSH/SSHWireshark.aspx" class="button">Click Here for the tool</a> </p>
                 </div>
             </div>
         </div>     
@@ -31,7 +31,7 @@
                 <div class="ribbon ribbon-orange">Ping</div>
                 <div class="box-content">
                     <p>ping is a computer network administration software utility used to test the reachability of a host on an Internet Protocol (IP) network. It measures the round-trip time for messages sent from the originating host to a destination computer that are echoed back to the source.</p>
-                    <p class="tool-link"><a href="/Security Tools/Tool UI/SSHPing.aspx" class="button">Click Here for the tool</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/SSH/SSHPing.aspx" class="button">Click Here for the tool</a> </p>
                 </div>
             </div>
         </div>
