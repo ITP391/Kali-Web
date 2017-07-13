@@ -324,6 +324,7 @@
     <Content Include="Security Tools\Tool UI\nmap.aspx" />
     <Content Include="Security Tools\Submenu\Recon.aspx" />
     <Content Include="Security Tools\Submenu\Vulnerable.aspx" />
+    <Content Include="Security Tools\Tool UI\nmapVul.aspx" />
     <Content Include="Security Tools\Tool UI\ping.aspx" />
     <Content Include="Security Tools\Tool UI\SSHNmap.aspx" />
     <Content Include="Security Tools\Tool UI\SSHPing.aspx" />
@@ -461,6 +462,13 @@
     </Compile>
     <Compile Include="Security Tools\Submenu\Vulnerable.aspx.designer.cs">
       <DependentUpon>Vulnerable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\nmapVul.aspx.cs">
+      <DependentUpon>nmapVul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\Tool UI\nmapVul.aspx.designer.cs">
+      <DependentUpon>nmapVul.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\Tool UI\ping.aspx.cs">
       <DependentUpon>ping.aspx</DependentUpon>

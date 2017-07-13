@@ -22,10 +22,13 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
+            String input = IP.Text;
+
             Process p = new Process();
             // No need to use the CMD processor - just call ping directly.
             p.StartInfo.FileName = "ping.exe";
-            p.StartInfo.Arguments = "-a 127.0.0.1"; //Change this to a variable
+            //p.StartInfo.Arguments = "-a 127.0.0.1";
+            p.StartInfo.Arguments = " -a " + input;
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.UseShellExecute = false;
             p.Start();

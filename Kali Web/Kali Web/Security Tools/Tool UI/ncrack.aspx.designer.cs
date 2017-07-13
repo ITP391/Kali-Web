@@ -31,13 +31,13 @@ namespace Kali_Web.Security_Tools.Tool_UI {
         protected global::System.Web.UI.WebControls.Literal FailureText;
         
         /// <summary>
-        /// IP control.
+        /// IPinput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IP;
+        protected global::System.Web.UI.WebControls.TextBox IPinput;
         
         /// <summary>
         /// Output control.

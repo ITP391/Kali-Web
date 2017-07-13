@@ -7,7 +7,7 @@
                 <%-- Ribbon container of a box --%> 
                 <div class="ribbon ribbon-blue">Nmap</div>
                 <div class="box-content">
-                    <p>Nmap (Network Mapper) is a security scanner used to discover hosts and services on a computer network, thus building a "map" of the network. To accomplish its goal, Nmap sends specially crafted packets to the target host(s) and then analyzes the responses. This verson of the tool scans only for open ports. For a more in depth scan, use the Nmap scan in the Vulnerability section.</p>
+                    <p>Nmap (Network Mapper) is a security scanner used to discover hosts and services on a computer network, thus building a "map" of the network. To accomplish its goal, Nmap sends specially crafted packets to the target host(s) and then analyzes the responses. This verson of the tool scans only for open ports. For an Operating System scan, use the Nmap scan in the Vulnerability section.</p>
                     <p class="tool-link"><a href="/Security Tools/Tool UI/nmap.aspx" class="button">Click Here for the tool</a> </p>
                 </div>
             </div>
