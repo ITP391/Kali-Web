@@ -30,8 +30,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="box">
+        <div class="col-md-8">
+            <div class="box twice-box">
                 <div class="ribbon ribbon-orange">Your Progress</div>
                 <div class="box-content">
                     <p>Test</p>
@@ -43,7 +43,7 @@
                 <div class="ribbon ribbon-blue">Your Quizes</div>
                 <div class="box-content">
                     <p>Complete these quizes to make sure you understand the usage of the tools!</p>
-                    <p class="tool-link"><a href="/Security Tools/Submenu/PassAttack.aspx" class="button">Click Here to view Quizes!</a> </p>
+                    <p class="tool-link"><a href="/Security Tools/StudQuizzes.aspx" class="button">Click Here for Quizes!</a> </p>
                 </div>
             </div>
         </div>

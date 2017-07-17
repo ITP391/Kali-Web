@@ -280,3 +280,15 @@ a.button {
 .white-text {
     color: white;
 }
+
+.twice-box {
+    width: 692px; 
+}
+
+.twice-box .ribbon {
+    width: 731px;
+}
+
+#MainContent_Button1 {
+    width: auto;
+}

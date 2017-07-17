@@ -40,6 +40,8 @@ namespace Kali_Web.Account
                 String dbEmail = "";
                 String dbPassword = "";
                 String dbSalt = "";
+                int userId = 0;
+                string userPermission = "";
 
                 myConnection.Open();
 
@@ -57,6 +59,8 @@ namespace Kali_Web.Account
                     dbEmail = reader["Email_Address"].ToString();
                     dbPassword = reader["Password"].ToString();
                     dbSalt = reader["Salt"].ToString();
+                    userId = int.Parse(reader["Id"].ToString());
+                    userPermission = reader["Permission"].ToString();
 
                 }
 
@@ -69,10 +73,19 @@ namespace Kali_Web.Account
                 {
 
                     //Session["email"] = TextBox1.Text;
+                    Session["userId"] = userId;
+                    Session["userPermission"] = userPermission;
 
-                    Response.Redirect("/Security Tools/HomeStud.aspx");
-                    //Response.Redirect("/Security Tools/HomeLect.aspx");
-                }
+                    if (userPermission == "lecturer")
+                    {
+                        Response.Redirect("/Security Tools/HomeLect.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("/Security Tools/HomeStud.aspx");
+                    }
+
+                  }
 
                 //Either email/password wrong, shows this
                 else if (dbEmail.Equals(inputemail) && !dbPassword.Equals(passwordHash))

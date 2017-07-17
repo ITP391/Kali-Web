@@ -48,5 +48,14 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="box">
+                <div class="ribbon ribbon-green">Quiz management</div>
+                <div class="box-content">
+                    <p>Here you can manage (add, delete) your quizzes.</p>
+                    <p class="tool-link"><a href="/Quiz/ConfigureQuiz.aspx" class="button">Manage quizzes</a> </p>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>

@@ -49,7 +49,7 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container body-content">
                 <div class="navbar-header">
-                    <a class="color-white" runat="server" href="/Default.aspx" id="Logo">Kali Web</a>
+                    <a class="color-white" runat="server" href="/Default.aspx" id="Logo"><img src="/Content/img/Kali-web-logo.png" style="margin-top: -15px; width: 150px;"/></a>
                 </div>
 
                 <div class="navbar-collapse">

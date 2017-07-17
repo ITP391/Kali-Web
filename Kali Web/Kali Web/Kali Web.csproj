@@ -143,6 +143,7 @@
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\owl.theme.default.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\Kali-web-logo.png" />
     <Content Include="Content\img\logout-small.png" />
     <Content Include="Content\img\logout.png" />
     <Content Include="Content\js\jquery-1.11.0.min.js" />
@@ -162,7 +163,13 @@
     </Content>
     <Content Include="Content\font\Heaven Matters Personal Use.ttf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\KaliWeb20170711015327 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Quiz\AddChoiceQuestion.aspx" />
+    <Content Include="Quiz\AddTextQuestion.aspx" />
+    <Content Include="Quiz\ConfigureQuiz.aspx" />
+    <Content Include="Quiz\QuizResult.aspx" />
+    <Content Include="Quiz\TakeQuiz.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -329,6 +336,7 @@
     <Content Include="Security Tools\Tool UI\SSHPing.aspx" />
     <Content Include="Security Tools\Tool UI\SSHWireshark.aspx" />
     <Content Include="Security Tools\Tool UI\Wireshark.aspx" />
+    <Content Include="Security Tools\StudQuizzes.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -384,6 +392,43 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quiz\AddChoiceQuestion.aspx.cs">
+      <DependentUpon>AddChoiceQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quiz\AddChoiceQuestion.aspx.designer.cs">
+      <DependentUpon>AddChoiceQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz\AddTextQuestion.aspx.cs">
+      <DependentUpon>AddTextQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quiz\AddTextQuestion.aspx.designer.cs">
+      <DependentUpon>AddTextQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz\ConfigureQuiz.aspx.cs">
+      <DependentUpon>ConfigureQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quiz\ConfigureQuiz.aspx.designer.cs">
+      <DependentUpon>ConfigureQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz\QuizAnswer.cs" />
+    <Compile Include="Quiz\QuizQuestion.cs" />
+    <Compile Include="Quiz\QuizResult.aspx.cs">
+      <DependentUpon>QuizResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quiz\QuizResult.aspx.designer.cs">
+      <DependentUpon>QuizResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz\TakeQuiz.aspx.cs">
+      <DependentUpon>TakeQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quiz\TakeQuiz.aspx.designer.cs">
+      <DependentUpon>TakeQuiz.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Security Tools\HomeLect.aspx.cs">
       <DependentUpon>HomeLect.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -495,6 +540,13 @@
     </Compile>
     <Compile Include="Security Tools\Tool UI\Wireshark.aspx.designer.cs">
       <DependentUpon>Wireshark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security Tools\StudQuizzes.aspx.cs">
+      <DependentUpon>StudQuizzes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security Tools\StudQuizzes.aspx.designer.cs">
+      <DependentUpon>StudQuizzes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
