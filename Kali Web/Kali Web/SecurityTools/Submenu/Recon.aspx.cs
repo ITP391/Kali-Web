@@ -7,11 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace Kali_Web.Security_Tools
 {
-    public partial class Vulnerable : System.Web.UI.Page
+    public partial class HomeStud : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            String permission = (String)Session["permission"];
 
+            if (permission == null || permission == "")
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
         }
     }
 }

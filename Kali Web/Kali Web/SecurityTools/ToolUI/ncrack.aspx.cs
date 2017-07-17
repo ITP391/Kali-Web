@@ -11,16 +11,24 @@ namespace Kali_Web.Security_Tools.Tool_UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            String permission = (String)Session["permission"];
 
+            if (permission == null || permission == "")
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
+            String IP = IPinput.Text;
+
             System.Diagnostics.Process si = new System.Diagnostics.Process();
             //si.StartInfo.WorkingDirectory = "~/Security Binaries/Nmap";
             si.StartInfo.UseShellExecute = false;
             si.StartInfo.FileName = "C:\\Users\\155126N\\Source\\Repos\\Kali-Web\\Kali Web\\Kali Web\\Security Binaries\\Ncrack\\ncrack.exe";
-            si.StartInfo.Arguments = "/c ncrack 127.0.0.1:3389";
+            //si.StartInfo.Arguments = "/c ncrack 127.0.0.1:3389";
+            si.StartInfo.Arguments = "/c ncrack " + IP;
             si.StartInfo.CreateNoWindow = true;
             si.StartInfo.RedirectStandardInput = true;
             si.StartInfo.RedirectStandardOutput = true;

@@ -433,112 +433,127 @@
       <DependentUpon>HomeLect.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\HomeLect.aspx.designer.cs">
+    <Compile Include="SecurityTools\HomeLect.aspx.designer.cs">
       <DependentUpon>HomeLect.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\HomeStud.aspx.cs">
+    <Compile Include="SecurityTools\HomeStud.aspx.cs">
       <DependentUpon>HomeStud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\HomeStud.aspx.designer.cs">
+    <Compile Include="SecurityTools\HomeStud.aspx.designer.cs">
       <DependentUpon>HomeStud.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\StudList.aspx.cs">
-      <DependentUpon>StudList.aspx</DependentUpon>
+    <Compile Include="SecurityTools\Permissions.aspx.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\StudList.aspx.designer.cs">
-      <DependentUpon>StudList.aspx</DependentUpon>
+    <Compile Include="SecurityTools\Permissions.aspx.designer.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Submenu\PassAttack.aspx.cs">
+    <Compile Include="SecurityTools\Submenu\PassAttack.aspx.cs">
       <DependentUpon>PassAttack.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Submenu\PassAttack.aspx.designer.cs">
+    <Compile Include="SecurityTools\Submenu\PassAttack.aspx.designer.cs">
       <DependentUpon>PassAttack.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Quizes.aspx.cs">
+    <Compile Include="SecurityTools\Submenu\Quizes.aspx.cs">
       <DependentUpon>Quizes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Quizes.aspx.designer.cs">
+    <Compile Include="SecurityTools\Submenu\Quizes.aspx.designer.cs">
       <DependentUpon>Quizes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Submenu\SSHRecon.aspx.cs">
+    <Compile Include="SecurityTools\Submenu\SSHRecon.aspx.cs">
       <DependentUpon>SSHRecon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Submenu\SSHRecon.aspx.designer.cs">
+    <Compile Include="SecurityTools\Submenu\SSHRecon.aspx.designer.cs">
       <DependentUpon>SSHRecon.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\Hashcat.aspx.cs">
+    <Compile Include="SecurityTools\ToolUI\Hashcat.aspx.cs">
       <DependentUpon>Hashcat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\Hashcat.aspx.designer.cs">
+    <Compile Include="SecurityTools\ToolUI\Hashcat.aspx.designer.cs">
       <DependentUpon>Hashcat.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\ncrack.aspx.cs">
+    <Compile Include="SecurityTools\ToolUI\ncrack.aspx.cs">
       <DependentUpon>ncrack.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\ncrack.aspx.designer.cs">
+    <Compile Include="SecurityTools\ToolUI\ncrack.aspx.designer.cs">
       <DependentUpon>ncrack.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\nmap.aspx.cs">
+    <Compile Include="SecurityTools\ToolUI\nmap.aspx.cs">
       <DependentUpon>nmap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\nmap.aspx.designer.cs">
+    <Compile Include="SecurityTools\ToolUI\nmap.aspx.designer.cs">
       <DependentUpon>nmap.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Recon.aspx.cs">
+    <Compile Include="SecurityTools\Submenu\Recon.aspx.cs">
       <DependentUpon>Recon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Recon.aspx.designer.cs">
+    <Compile Include="SecurityTools\Submenu\Recon.aspx.designer.cs">
       <DependentUpon>Recon.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Vulnerable.aspx.cs">
+    <Compile Include="SecurityTools\Submenu\Vulnerable.aspx.cs">
       <DependentUpon>Vulnerable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Submenu\Vulnerable.aspx.designer.cs">
+    <Compile Include="SecurityTools\Submenu\Vulnerable.aspx.designer.cs">
       <DependentUpon>Vulnerable.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\ping.aspx.cs">
+    <Compile Include="SecurityTools\ToolUI\nmapVul.aspx.cs">
+      <DependentUpon>nmapVul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityTools\ToolUI\nmapVul.aspx.designer.cs">
+      <DependentUpon>nmapVul.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityTools\ToolUI\ping.aspx.cs">
       <DependentUpon>ping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\ping.aspx.designer.cs">
+    <Compile Include="SecurityTools\ToolUI\ping.aspx.designer.cs">
       <DependentUpon>ping.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHNmap.aspx.cs">
+    <Compile Include="SecurityTools\SSH\SSH.cs" />
+    <Compile Include="SecurityTools\SSH\SSHNmap.aspx.cs">
       <DependentUpon>SSHNmap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHNmap.aspx.designer.cs">
+    <Compile Include="SecurityTools\SSH\SSHNmap.aspx.designer.cs">
       <DependentUpon>SSHNmap.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHPing.aspx.cs">
+    <Compile Include="SecurityTools\SSH\SSHPing.aspx.cs">
       <DependentUpon>SSHPing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHPing.aspx.designer.cs">
+    <Compile Include="SecurityTools\SSH\SSHPing.aspx.designer.cs">
       <DependentUpon>SSHPing.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHWireshark.aspx.cs">
+    <Compile Include="SecurityTools\SSH\ServerTools.aspx.cs">
+      <DependentUpon>ServerTools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityTools\SSH\ServerTools.aspx.designer.cs">
+      <DependentUpon>ServerTools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityTools\SSH\SSHWireshark.aspx.cs">
       <DependentUpon>SSHWireshark.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\SSHWireshark.aspx.designer.cs">
+    <Compile Include="SecurityTools\SSH\SSHWireshark.aspx.designer.cs">
       <DependentUpon>SSHWireshark.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\Wireshark.aspx.cs">
+    <Compile Include="SecurityTools\ToolUI\Wireshark.aspx.cs">
       <DependentUpon>Wireshark.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\Tool UI\Wireshark.aspx.designer.cs">
+    <Compile Include="SecurityTools\ToolUI\Wireshark.aspx.designer.cs">
       <DependentUpon>Wireshark.aspx</DependentUpon>
     </Compile>
     <Compile Include="Security Tools\StudQuizzes.aspx.cs">

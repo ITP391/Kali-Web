@@ -6,7 +6,7 @@
                 <div class="ribbon ribbon-blue">Information Gathering</div>
                 <div class="box-content">
                     <p>Review questions for Information Gathering</p>
-                    <p class="tool-link"><a href="/Security Tools/Submenu/Recon.aspx" class="button">Click Here for the tool</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/Submenu/Recon.aspx" class="button">Click Here for the tool</a> </p>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
                 <div class="box-content">
                     <p>Review questions for Vulnerability Analysis</p>
                     <p class="tool-link">          
-                        <a href="/Security Tools/Submenu/Vulnerable.aspx" class="button">Click Here for the tool</a>
+                        <a href="/SecurityTools/Submenu/Vulnerable.aspx" class="button">Click Here for the tool</a>
                     </p>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="ribbon ribbon-orange">Password Attack</div>
                 <div class="box-content">
                     <p>Review questions for Password Attack</p>
-                    <p class="tool-link"><a href="/Security Tools/Submenu/PassAttack.aspx" class="button">Click Here for the tool</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/Submenu/PassAttack.aspx" class="button">Click Here for the tool</a> </p>
                 </div>
             </div>
         </div>

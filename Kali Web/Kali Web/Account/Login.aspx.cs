@@ -40,8 +40,9 @@ namespace Kali_Web.Account
                 String dbEmail = "";
                 String dbPassword = "";
                 String dbSalt = "";
-                int userId = 0;
-                string userPermission = "";
+                String dbFName = "";
+                String dbLName = "";
+                String dbPermission = "";
 
                 myConnection.Open();
 
@@ -59,8 +60,9 @@ namespace Kali_Web.Account
                     dbEmail = reader["Email_Address"].ToString();
                     dbPassword = reader["Password"].ToString();
                     dbSalt = reader["Salt"].ToString();
-                    userId = int.Parse(reader["Id"].ToString());
-                    userPermission = reader["Permission"].ToString();
+                    dbFName = reader["FName"].ToString();
+                    dbLName = reader["LName"].ToString();
+                    dbPermission = reader["Permission"].ToString();
 
                 }
 
@@ -73,19 +75,23 @@ namespace Kali_Web.Account
                 {
 
                     //Session["email"] = TextBox1.Text;
-                    Session["userId"] = userId;
-                    Session["userPermission"] = userPermission;
+                    String name = dbFName + " " + dbLName;
+                    String permission = dbPermission;
 
-                    if (userPermission == "lecturer")
-                    {
-                        Response.Redirect("/Security Tools/HomeLect.aspx");
-                    }
-                    else
+                    Session["name"] = name;
+                    Session["permission"] = permission;
+                    Session["userPermission"] = permission;
+                    
+                    if (dbPermission == "student")
                     {
                         Response.Redirect("/Security Tools/HomeStud.aspx");
                     }
-
-                  }
+                    else if (dbPermission == "lecturer")
+                    {
+                        Response.Redirect("/Security Tools/HomeLect.aspx");
+                    }
+                    //Response.Redirect("/Security Tools/HomeLect.aspx");
+                }
 
                 //Either email/password wrong, shows this
                 else if (dbEmail.Equals(inputemail) && !dbPassword.Equals(passwordHash))
