@@ -34,29 +34,29 @@
                                 <%# DataBinder.Eval(Container.DataItem, "Answer1") %>
                             </label>
                         </div>
-                        <div class="radio  <%# DataBinder.Eval(Container.DataItem, "QuestionType").ToString() == "TEXT" ? "hidden" : "" %>">
+                        <div class="radio ">
                             <label style="float: left;">
                                 <input type="radio" required name='question-<%# DataBinder.Eval(Container.DataItem, "Id") %>' value="2" class="<%# DataBinder.Eval(Container.DataItem, "QuestionType").ToString() == "TEXT" ? "hidden" : "" %>">
                                 <%# DataBinder.Eval(Container.DataItem, "Answer2") %>
                             </label>
                         </div>
-                        <div class="radio  <%# DataBinder.Eval(Container.DataItem, "QuestionType").ToString() == "TEXT" ? "hidden" : "" %>">
+                        <div class="radio ">
                             <label style="float: left;">
                                 <input type="radio" required name='question-<%# DataBinder.Eval(Container.DataItem, "Id") %>' value="3" class="<%# DataBinder.Eval(Container.DataItem, "QuestionType").ToString() == "TEXT" ? "hidden" : "" %>">
                                 <%# DataBinder.Eval(Container.DataItem, "Answer3") %>
                             </label>
                         </div>
-                        <div class="radio  <%# DataBinder.Eval(Container.DataItem, "QuestionType").ToString() == "TEXT" ? "hidden" : "" %>">
+                        <div class="radio ">
                             <label style="float: left;">
                                 <input type="radio" required name='question-<%# DataBinder.Eval(Container.DataItem, "Id") %>' value="4" class="<%# DataBinder.Eval(Container.DataItem, "QuestionType").ToString() == "TEXT" ? "hidden" : "" %>">
                                 <%# DataBinder.Eval(Container.DataItem, "Answer4") %>
                             </label>
                         </div>
-                        <div class="radio  <%# DataBinder.Eval(Container.DataItem, "QuestionType").ToString() == "CHOICE" ? "hidden" : "" %>">
+                      <%--  <div class="radio">
                             <label style="float: left; width: 100%">
                                 <input type="text" required name='question-text-<%# DataBinder.Eval(Container.DataItem, "Id") %>' style="width: 100%" />
                             </label>
-                        </div>
+                        </div>--%>
                     </div>
                 </div>
             </ItemTemplate>

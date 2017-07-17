@@ -43,7 +43,7 @@
                 <div class="ribbon ribbon-blue">Your Quizes</div>
                 <div class="box-content">
                     <p>Complete these quizes to make sure you understand the usage of the tools!</p>
-                    <p class="tool-link"><a href="/Security Tools/StudQuizzes.aspx" class="button">Click Here for Quizes!</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/StudQuizzes.aspx" class="button">Click Here for Quizes!</a> </p>
                 </div>
             </div>
         </div>

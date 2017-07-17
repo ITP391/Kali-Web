@@ -19,7 +19,7 @@ namespace Kali_Web.Security_Tools
             }
             else if (permission == "lecturer")
             {
-                Response.Redirect("/Security Tools/HomeLect.aspx");
+                Response.Redirect("HomeLect.aspx");
             }
         }
     }

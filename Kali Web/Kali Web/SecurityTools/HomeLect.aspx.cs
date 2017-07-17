@@ -19,8 +19,9 @@ namespace Kali_Web.Security_Tools
             }
             else if (permission == "student")
             {
-                Response.Redirect("/Security Tools/HomeStud.aspx");
+                Response.Redirect("HomeStud.aspx");
             }
+            
         }
     }
 }

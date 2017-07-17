@@ -320,23 +320,25 @@
     <Content Include="Security Binaries\Wireshark\wireshark.html" />
     <Content Include="Security Binaries\Wireshark\ws.css" />
     <Content Include="Security Binaries\Wireshark\zlib1.dll" />
-    <Content Include="Security Tools\HomeLect.aspx" />
-    <Content Include="Security Tools\HomeStud.aspx" />
-    <Content Include="Security Tools\StudList.aspx" />
-    <Content Include="Security Tools\Submenu\PassAttack.aspx" />
-    <Content Include="Security Tools\Submenu\Quizes.aspx" />
-    <Content Include="Security Tools\Submenu\SSHRecon.aspx" />
-    <Content Include="Security Tools\Tool UI\Hashcat.aspx" />
-    <Content Include="Security Tools\Tool UI\ncrack.aspx" />
-    <Content Include="Security Tools\Tool UI\nmap.aspx" />
-    <Content Include="Security Tools\Submenu\Recon.aspx" />
-    <Content Include="Security Tools\Submenu\Vulnerable.aspx" />
-    <Content Include="Security Tools\Tool UI\ping.aspx" />
-    <Content Include="Security Tools\Tool UI\SSHNmap.aspx" />
-    <Content Include="Security Tools\Tool UI\SSHPing.aspx" />
-    <Content Include="Security Tools\Tool UI\SSHWireshark.aspx" />
-    <Content Include="Security Tools\Tool UI\Wireshark.aspx" />
-    <Content Include="Security Tools\StudQuizzes.aspx" />
+    <Content Include="SecurityTools\StudQuizzes.aspx" />
+    <Content Include="SecurityTools\HomeLect.aspx" />
+    <Content Include="SecurityTools\HomeStud.aspx" />
+    <Content Include="SecurityTools\Permissions.aspx" />
+    <Content Include="SecurityTools\SSH\ServerTools.aspx" />
+    <Content Include="SecurityTools\SSH\SSHNmap.aspx" />
+    <Content Include="SecurityTools\SSH\SSHPing.aspx" />
+    <Content Include="SecurityTools\SSH\SSHWireshark.aspx" />
+    <Content Include="SecurityTools\Submenu\PassAttack.aspx" />
+    <Content Include="SecurityTools\Submenu\Quizes.aspx" />
+    <Content Include="SecurityTools\Submenu\Recon.aspx" />
+    <Content Include="SecurityTools\Submenu\SSHRecon.aspx" />
+    <Content Include="SecurityTools\Submenu\Vulnerable.aspx" />
+    <Content Include="SecurityTools\ToolUI\Hashcat.aspx" />
+    <Content Include="SecurityTools\ToolUI\ncrack.aspx" />
+    <Content Include="SecurityTools\ToolUI\nmap.aspx" />
+    <Content Include="SecurityTools\ToolUI\nmapVul.aspx" />
+    <Content Include="SecurityTools\ToolUI\ping.aspx" />
+    <Content Include="SecurityTools\ToolUI\Wireshark.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -429,7 +431,7 @@
     <Compile Include="Quiz\TakeQuiz.aspx.designer.cs">
       <DependentUpon>TakeQuiz.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\HomeLect.aspx.cs">
+    <Compile Include="SecurityTools\HomeLect.aspx.cs">
       <DependentUpon>HomeLect.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -439,9 +441,6 @@
     <Compile Include="SecurityTools\HomeStud.aspx.cs">
       <DependentUpon>HomeStud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SecurityTools\HomeStud.aspx.designer.cs">
-      <DependentUpon>HomeStud.aspx</DependentUpon>
     </Compile>
     <Compile Include="SecurityTools\Permissions.aspx.cs">
       <DependentUpon>Permissions.aspx</DependentUpon>
@@ -556,11 +555,11 @@
     <Compile Include="SecurityTools\ToolUI\Wireshark.aspx.designer.cs">
       <DependentUpon>Wireshark.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Security Tools\StudQuizzes.aspx.cs">
+    <Compile Include="SecurityTools\StudQuizzes.aspx.cs">
       <DependentUpon>StudQuizzes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Security Tools\StudQuizzes.aspx.designer.cs">
+    <Compile Include="SecurityTools\StudQuizzes.aspx.designer.cs">
       <DependentUpon>StudQuizzes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">

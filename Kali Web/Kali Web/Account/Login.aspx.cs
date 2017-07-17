@@ -84,13 +84,12 @@ namespace Kali_Web.Account
                     
                     if (dbPermission == "student")
                     {
-                        Response.Redirect("/Security Tools/HomeStud.aspx");
+                        Response.Redirect("/SecurityTools/HomeStud.aspx");
                     }
                     else if (dbPermission == "lecturer")
                     {
-                        Response.Redirect("/Security Tools/HomeLect.aspx");
+                        Response.Redirect("/SecurityTools/HomeLect.aspx");
                     }
-                    //Response.Redirect("/Security Tools/HomeLect.aspx");
                 }
 
                 //Either email/password wrong, shows this
