@@ -2,6 +2,9 @@
 
 namespace Kali_Web.Quiz
 {
+    /// <summary>
+    /// Class for representing a specific quiz question
+    /// </summary>
     public class QuizQuestion
     {
         public QuizQuestion(int id, string category, string description,string answer1, string answer2, string answer3, string answer4, int correctAnswer, string correctTextAnswer = null, string questionType = "CHOICE")

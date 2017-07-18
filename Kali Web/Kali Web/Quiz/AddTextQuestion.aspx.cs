@@ -15,14 +15,22 @@ namespace Kali_Web.Quiz
 
         }
 
+        /// <summary>
+        /// This function adds the question to the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void AddQuestion_Callback(object sender, EventArgs e)
         {
+            // Open the connection to database
             SqlConnection myConnection;
             using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager
                 .ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
 
                 myConnection.Open();
+
+                // Query for inserting the question
                 string query =
                     "INSERT INTO [dbo].[Question]" +
                     "(Category, Description, Answer1, Answer2, Answer3, Answer4, CorrectOption, CorrectAnswer, QuestionType)";
@@ -42,11 +50,12 @@ namespace Kali_Web.Quiz
 
                 myCommand.ExecuteNonQuery();
 
+                // Clear input
                 QuestionDescriptionTextBox.Text = string.Empty;
-            
                 QuestionsCorrectAnswerTextBox.Text = null;
             }
 
+            // Redirect to the page where we show all questions
             Response.Redirect("ConfigureQuiz.aspx");
         }
     }

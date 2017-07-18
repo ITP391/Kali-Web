@@ -9,47 +9,80 @@ namespace Kali_Web.Quiz
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        // Property for the counter (counts the seconds)
         static int? counter;
 
+        // Propery for how many seconds should each user be allowed on page 
+        // multiplied by number of questions
         private static int secondPerQuestion = 20;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Get the questions for a specific category and add them to the repeater
             var questionsCateg = Request.QueryString["category"];
             MyRepeater.DataSource = GetQuestions(questionsCateg);
             MyRepeater.DataBind();
 
+            // Initialize the counter with number of questions multiplied by time allowed for each question
             if(counter == null) counter = secondPerQuestion * GetQuestions(questionsCateg).Count;
         }
 
+        /// <summary>
+        /// Function for verifying the answers
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void VerifyAnswers(object sender, EventArgs e)
         {
+            // Get the category from the URL
             var questionsCateg = Request.QueryString["category"];
 
+            // If counter expired, redirect to the result page
             if (sender == null && e == null)
             {
                 counter = null;
                 Response.Redirect("QuizResult.aspx?category=" + questionsCateg);
             }
 
+            // Get the list of questions for a specific category
             var questionsList = GetQuestions(questionsCateg);
             var answersList = new List<QuizAnswer>();
             NameValueCollection formValues = Request.Form;
 
             foreach (var formParamKey in formValues.AllKeys)
             {
-                if (formParamKey.StartsWith("question"))
+                // if it is a CHOICE question, read the answers and add the answer to the list
+                if (formParamKey.StartsWith("question-choice"))
                 {
-                    var questionAnswer = int.Parse(formValues[formParamKey]);
-                    var questionId = int.Parse(formParamKey.Split('-')[1]);
+                    var questionChoiceAnswer = int.Parse(formValues[formParamKey]);
+                    var questionId = int.Parse(formParamKey.Split('-')[2]);
 
-                    answersList.Add(new QuizAnswer{ ChosenAnswer = questionAnswer, InitialQuestion = questionsList.First(x => x.Id == questionId)});
+                    answersList.Add(new QuizAnswer
+                    {
+                        ChosenChoiceAnswer = questionChoiceAnswer,
+                        InitialQuestion = questionsList.First(x => x.Id == questionId)
+                    });
+                }
+
+                // if it is a TEXT question, read the answers and add the answer to the list
+                else if (formParamKey.StartsWith("question-text"))
+                {
+                    var questionTextAnswer =formValues[formParamKey];
+                    var questionId = int.Parse(formParamKey.Split('-')[2]);
+
+                    answersList.Add(new QuizAnswer
+                    {
+                        ChosenTextAnswer = questionTextAnswer,
+                        InitialQuestion = questionsList.First(x => x.Id == questionId),
+                    });
                 }
             }
 
+            // Add the answers list to the session variable (used in QuizResult.aspx.cs)
             Session["answers" + questionsCateg] = answersList;
             counter = null;
 
+            // Redirect to result page
             Response.Redirect("QuizResult.aspx?category=" + questionsCateg);
         }
 
