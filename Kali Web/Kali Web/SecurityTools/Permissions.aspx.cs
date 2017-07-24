@@ -14,90 +14,98 @@ namespace Kali_Web.Security_Tools
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             Boolean IGAccess = false;
             Boolean VAAccess = false;
             Boolean PAAccess = false;
 
-            
-
-            SqlConnection myConnection;
-            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            foreach (GridViewRow row1 in GridView1.Rows)
             {
-                myConnection.Open();
-                // get all user's data from db to populate table based on permission (student)
-                string query = "SELECT * FROM [User] WHERE [Permission] = @Permission";
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
-                myCommand.CommandType = CommandType.Text;
-                myCommand.Parameters.AddWithValue("@Permission", "student");
+                String Id = row1.Cells[0].Text;
+                CheckBox checkBox1 = row1.FindControl("IGAcc") as CheckBox;
+                CheckBox checkBox2 = row1.FindControl("VAA") as CheckBox;
+                CheckBox checkBox3 = row1.FindControl("PWA") as CheckBox;
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
 
-
-                SqlDataReader reader = myCommand.ExecuteReader();
-
-                // read values in db, then  store into the variable
-
-                // this section requires rework
-                if (reader.Read())
+                SqlConnection myConnection;
+                using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
-                    VAAccess = (Boolean)reader["VAAccess"];
-                    IGAccess = (Boolean)reader["IGAccess"];
-                    PAAccess = (Boolean)reader["PWAccess"];
+                    myConnection.Open();
+                    // get all user's data from db to populate table based on permission (student)
+                    string query = "SELECT * FROM [User] WHERE [Id] = @Id";
+                    SqlCommand myCommand = new SqlCommand(query, myConnection);
+                    myCommand.CommandType = CommandType.Text;
+                    myCommand.Parameters.AddWithValue("@Id", Id);
 
-                    foreach (GridViewRow row1 in GridView1.Rows)
+
+                    SqlDataReader reader = myCommand.ExecuteReader();
+
+                    // read values in db, then  store into the variable
+
+                    // this section requires rework
+                    if (reader.Read())
                     {
-                        CheckBox checkBox1 = row1.FindControl("IGAcc") as CheckBox;
-                        CheckBox checkBox2 = row1.FindControl("VAA") as CheckBox;
-                        CheckBox checkBox3 = row1.FindControl("PWA") as CheckBox;
-                        checkBox1.Checked = false;
-                        checkBox2.Checked = false;
-                        checkBox3.Checked = false;
+                        VAAccess = (Boolean)reader["VAAccess"];
+                        IGAccess = (Boolean)reader["IGAccess"];
+                        PAAccess = (Boolean)reader["PWAccess"];
 
-                        
 
-                        if (IGAccess == true && VAAccess == true && PAAccess == true)
+                        if (VAAccess == true && IGAccess == true && PAAccess == true)
                         {
                             checkBox1.Checked = true;
-                            checkBox1.Checked = true;
+                            checkBox2.Checked = true;
                             checkBox3.Checked = true;
                         }
-                        else if (IGAccess == true && VAAccess == true && PAAccess == false)
+                        else if (VAAccess == true && IGAccess == true && PAAccess == false)
                         {
                             checkBox1.Checked = true;
                             checkBox2.Checked = true;
                             checkBox3.Checked = false;
                         }
-                        else if (IGAccess == true && VAAccess == false && PAAccess == false)
+                        else if (VAAccess == true && IGAccess == false && PAAccess == false)
                         {
                             checkBox1.Checked = true;
                             checkBox2.Checked = false;
                             checkBox3.Checked = false;
                         }
-                        else if (IGAccess == false && VAAccess == false && PAAccess == false)
+                        else if (VAAccess == false && IGAccess == false && PAAccess == false)
                         {
                             checkBox1.Checked = false;
                             checkBox2.Checked = false;
                             checkBox3.Checked = false;
                         }
-                        else if (IGAccess == true && VAAccess == false && PAAccess == true)
+                        else if (VAAccess == false && IGAccess == false && PAAccess == true)
+                        {
+                            checkBox1.Checked = false;
+                            checkBox2.Checked = false;
+                            checkBox3.Checked = true;
+                        }
+                        else if (VAAccess == false && IGAccess == true && PAAccess == true)
+                        {
+                            checkBox1.Checked = false;
+                            checkBox2.Checked = true;
+                            checkBox3.Checked = true;
+                        }
+                        else if (VAAccess == false && IGAccess == true && PAAccess == false)
+                        {
+                            checkBox1.Checked = false;
+                            checkBox2.Checked = true;
+                            checkBox3.Checked = false;
+                        }
+                        else if (VAAccess == true && IGAccess == false && PAAccess == true)
                         {
                             checkBox1.Checked = true;
                             checkBox2.Checked = false;
                             checkBox3.Checked = true;
                         }
-                        else if (IGAccess == true && VAAccess == false && PAAccess == false)
-                        {
-                            checkBox1.Checked = false;
-                            checkBox2.Checked = false;
-                            checkBox3.Checked = false;
-                        }
                     }
-                    
                 }
 
-            }
-
             
+
             }
+        }
 
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -119,7 +127,7 @@ namespace Kali_Web.Security_Tools
                 CheckBox checkBox1 = row1.FindControl("IGAcc") as CheckBox;
                 CheckBox checkBox2 = row1.FindControl("VAA") as CheckBox;
                 CheckBox checkBox3 = row1.FindControl("PWA") as CheckBox;
-                String Id = row1.Cells[0].Text; ;
+                String Id = row1.Cells[0].Text;
                 Boolean IGAccess = checkBox1.Checked;
                 Boolean VAAccess = checkBox2.Checked;
                 Boolean PWAccess = checkBox3.Checked;
