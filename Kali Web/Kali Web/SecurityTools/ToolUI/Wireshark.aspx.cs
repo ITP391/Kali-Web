@@ -26,7 +26,8 @@ namespace Kali_Web.Security_Tools
             System.Diagnostics.Process si = new System.Diagnostics.Process();
             //si.StartInfo.WorkingDirectory = "~/Security Binaries/Nmap";
             si.StartInfo.UseShellExecute = false;
-            si.StartInfo.FileName = "C:\\Users\\155126N\\Source\\Repos\\Kali-Web\\Kali Web\\Kali Web\\Security Binaries\\Wireshark\\tshark.exe";
+            //si.StartInfo.FileName = "C:\\Users\\155126N\\Source\\Repos\\Kali-Web\\Kali Web\\Kali Web\\Security Binaries\\Wireshark\\tshark.exe";
+            si.StartInfo.FileName = "C:\\Tmp\\Kali-Web\\Wireshark\\tshark.exe";
             //si.StartInfo.Arguments = "/c tshark 127.0.0.1";
             si.StartInfo.Arguments = "/c tshark -a duration:60 " + input;
             si.StartInfo.CreateNoWindow = true;

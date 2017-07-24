@@ -26,9 +26,10 @@ namespace Kali_Web.Security_Tools.Tool_UI
             System.Diagnostics.Process si = new System.Diagnostics.Process();
             //si.StartInfo.WorkingDirectory = "~/Security Binaries/Nmap";
             si.StartInfo.UseShellExecute = false;
-            si.StartInfo.FileName = "C:\\Users\\155126N\\Source\\Repos\\Kali-Web\\Kali Web\\Kali Web\\Security Binaries\\Ncrack\\ncrack.exe";
+            //si.StartInfo.FileName = "C:\\Users\\155126N\\Source\\Repos\\Kali-Web\\Kali Web\\Kali Web\\Security Binaries\\Ncrack\\ncrack.exe";
+            si.StartInfo.FileName = "C:\\Tmp\\Kali-Web\\Ncrack\\ncrack.exe";
             //si.StartInfo.Arguments = "/c ncrack 127.0.0.1:3389";
-            si.StartInfo.Arguments = "/c ncrack " + IP;
+            si.StartInfo.Arguments = "/c ncrack " + IP + ":3389";
             si.StartInfo.CreateNoWindow = true;
             si.StartInfo.RedirectStandardInput = true;
             si.StartInfo.RedirectStandardOutput = true;
