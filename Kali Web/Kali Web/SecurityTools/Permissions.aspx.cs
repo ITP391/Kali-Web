@@ -15,11 +15,17 @@ namespace Kali_Web.Security_Tools
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            Boolean IGAccess = false;
+            Boolean VAAccess = false;
+            Boolean PAAccess = false;
+
+            
+
             SqlConnection myConnection;
             using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 myConnection.Open();
-
+                // get all user's data from db to populate table based on permission (student)
                 string query = "SELECT * FROM [User] WHERE [Permission] = @Permission";
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myCommand.CommandType = CommandType.Text;
@@ -28,8 +34,70 @@ namespace Kali_Web.Security_Tools
 
                 SqlDataReader reader = myCommand.ExecuteReader();
 
+                // read values in db, then  store into the variable
+
+                // this section requires rework
+                if (reader.Read())
+                {
+                    VAAccess = (Boolean)reader["VAAccess"];
+                    IGAccess = (Boolean)reader["IGAccess"];
+                    PAAccess = (Boolean)reader["PWAccess"];
+
+                    foreach (GridViewRow row1 in GridView1.Rows)
+                    {
+                        CheckBox checkBox1 = row1.FindControl("IGAcc") as CheckBox;
+                        CheckBox checkBox2 = row1.FindControl("VAA") as CheckBox;
+                        CheckBox checkBox3 = row1.FindControl("PWA") as CheckBox;
+                        checkBox1.Checked = false;
+                        checkBox2.Checked = false;
+                        checkBox3.Checked = false;
+
+                        
+
+                        if (IGAccess == true && VAAccess == true && PAAccess == true)
+                        {
+                            checkBox1.Checked = true;
+                            checkBox1.Checked = true;
+                            checkBox3.Checked = true;
+                        }
+                        else if (IGAccess == true && VAAccess == true && PAAccess == false)
+                        {
+                            checkBox1.Checked = true;
+                            checkBox2.Checked = true;
+                            checkBox3.Checked = false;
+                        }
+                        else if (IGAccess == true && VAAccess == false && PAAccess == false)
+                        {
+                            checkBox1.Checked = true;
+                            checkBox2.Checked = false;
+                            checkBox3.Checked = false;
+                        }
+                        else if (IGAccess == false && VAAccess == false && PAAccess == false)
+                        {
+                            checkBox1.Checked = false;
+                            checkBox2.Checked = false;
+                            checkBox3.Checked = false;
+                        }
+                        else if (IGAccess == true && VAAccess == false && PAAccess == true)
+                        {
+                            checkBox1.Checked = true;
+                            checkBox2.Checked = false;
+                            checkBox3.Checked = true;
+                        }
+                        else if (IGAccess == true && VAAccess == false && PAAccess == false)
+                        {
+                            checkBox1.Checked = false;
+                            checkBox2.Checked = false;
+                            checkBox3.Checked = false;
+                        }
+                    }
+                    
+                }
+
             }
-        }
+
+            
+            }
 
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -63,6 +131,7 @@ namespace Kali_Web.Security_Tools
                 if (IGAccess == true)
                 {
                     IGA = 1;
+
                     
                     if (VAAccess == true)
                     {

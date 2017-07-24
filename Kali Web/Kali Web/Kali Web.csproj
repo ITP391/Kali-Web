@@ -339,6 +339,7 @@
     <Content Include="SecurityTools\ToolUI\nmapVul.aspx" />
     <Content Include="SecurityTools\ToolUI\ping.aspx" />
     <Content Include="SecurityTools\ToolUI\Wireshark.aspx" />
+    <Content Include="SecurityTools\ModGrps.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -561,6 +562,13 @@
     </Compile>
     <Compile Include="SecurityTools\StudQuizzes.aspx.designer.cs">
       <DependentUpon>StudQuizzes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityTools\ModGrps.aspx.cs">
+      <DependentUpon>ModGrps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityTools\ModGrps.aspx.designer.cs">
+      <DependentUpon>ModGrps.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

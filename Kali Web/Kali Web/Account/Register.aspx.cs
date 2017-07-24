@@ -85,8 +85,8 @@ namespace Kali_Web.Account
                     {
                         Label10.Text = "";
 
-                        string query = "INSERT INTO [dbo].[User](Email_Address, FName, LName, Password, Phone_Number, Salt, Permission, IGAccess, VAAccess, PWAccess)";
-                        query += " VALUES (@Email, @FName, @LName, @Password, @PhoneNumber, @Salt, @Permission, @IGAccess, @VAAccess, @PWAccess)";
+                        string query = "INSERT INTO [dbo].[User](Email_Address, FName, LName, Password, Phone_Number, Salt, Permission, IGAccess, VAAccess, PWAccess, ModGrp)";
+                        query += " VALUES (@Email, @FName, @LName, @Password, @PhoneNumber, @Salt, @Permission, @IGAccess, @VAAccess, @PWAccess, @ModGrp)";
                         SqlCommand myCommand = new SqlCommand(query, myConnection);
 
                         //To prevent sql injection
@@ -100,6 +100,8 @@ namespace Kali_Web.Account
                         myCommand.Parameters.AddWithValue("IGAccess", 0);
                         myCommand.Parameters.AddWithValue("VAAccess", 0);
                         myCommand.Parameters.AddWithValue("PWAccess", 0);
+                        myCommand.Parameters.AddWithValue("ModGrp", DropDownList1.SelectedValue); //get selected value of dropdownlist, assign to variable, then insert it into the 0
+
 
                         myCommand.ExecuteNonQuery();
                         Response.Redirect("/Account/SuccessfulRegistration");

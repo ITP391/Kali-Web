@@ -93,12 +93,25 @@
                 <%--<asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>--%>
             </div>
 
+             <%--Email--%>
+    <%--SERI MADE CHANGES HERE LIKE MAJOR ALOT HAHA--%> 
+    <div class="form-group">
+    <asp:Label ID="Label11" class="col-xs-3 control-label" Font-Size="20px" runat="server" Text="Module Group"></asp:Label>
+    <div class="col-xs-8">
+       
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem>DSF1501</asp:ListItem>
+                    <asp:ListItem>DSF1502</asp:ListItem>
+                </asp:DropDownList>
+       
+                </div>
+            </div>
+
              <div class="form-group">
                 <div class="col-xs-8 col-xs-offset-3">
                       <asp:Button ID="Button1" runat="server" class="btn btn-success" Text="Register" OnClick="Register_Click" />
                 </div>
             </div>
-
         </div>
     </div>
 
