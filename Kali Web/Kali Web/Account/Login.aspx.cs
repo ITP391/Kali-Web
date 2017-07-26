@@ -73,11 +73,10 @@ namespace Kali_Web.Account
 
                 if (dbEmail.Equals(inputemail) && dbPassword.Equals(passwordHash))
                 {
-
-                    //Session["email"] = TextBox1.Text;
                     String name = dbFName + " " + dbLName;
                     String permission = dbPermission;
 
+                    Session["email"] = dbEmail;
                     Session["name"] = name;
                     Session["permission"] = permission;
                     Session["userPermission"] = permission;

@@ -40,6 +40,24 @@ namespace Kali_Web {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoggedIn;
         
         /// <summary>
+        /// stud control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl stud;
+        
+        /// <summary>
+        /// lect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lect;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

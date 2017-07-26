@@ -71,12 +71,12 @@
                                 <div class="left home">
                                         <h2 class="cust-menu-h2"><a href="/Default.aspx" style="padding-left: 40px;">Home</a></h2>
                                         <h2 class="cust-menu-h2"><a href="/About.aspx" style="padding-left: 20px;">About</a></h2>
-                                        <h2 class="cust-menu-h2"><a href="/Security Tools/HomeStud.aspx" style="padding-left: 20px;">Security Tools</a></h2>
-                                        <h2 class="cust-menu-h2"><a href="/Security Tools/HomeLect.aspx" style="padding-left: 20px;">Security Tools</a></h2>
+                                        <div id="stud" runat="server"><h2 class="cust-menu-h2"><a href="/Security Tools/HomeStud.aspx" style="padding-left: 20px;">Security Tools</a></h2></div>
+                                        <div id="lect" runat="server"><h2 class="cust-menu-h2"><a href="/Security Tools/HomeLect.aspx" style="padding-left: 20px;">Security Tools</a></h2></div>
+                                        <h2 class="cust-menu-h2"><a href="/Account/Register.aspx" style="padding-left: 20px;">Create Student Account</a></h2>
                                     </div>
                                     <div class="icon-list right">
                                 <ul>
-                                    <li><a href="/Account/Register.aspx" title="Add Friends">Create Student Account></a></li>
                                     <li><a href="/Default.aspx" title="Logout"><img src="/Content/img/logout-small.png" alt="Logout" title="Logout" /></a></li>
                                 </ul>
                             </div>
