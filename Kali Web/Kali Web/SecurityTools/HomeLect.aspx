@@ -36,7 +36,8 @@
             <div class="box">
                 <div class="ribbon ribbon-orange">Quiz Completion</div>
                 <div class="box-content">
-                    <p>Test</p>
+                    <p>Check students' progress and overall statistics for quizzes</p>
+                    <p class="tool-link"><a href="/SecurityTools/LectStat.aspx" class="button">Check Progress</a></p>
                 </div>
             </div>
         </div>

@@ -320,6 +320,8 @@
     <Content Include="Security Binaries\Wireshark\wireshark.html" />
     <Content Include="Security Binaries\Wireshark\ws.css" />
     <Content Include="Security Binaries\Wireshark\zlib1.dll" />
+    <Content Include="SecurityTools\LectStat.aspx" />
+    <Content Include="SecurityTools\QuizDetails.aspx" />
     <Content Include="SecurityTools\StudQuizzes.aspx" />
     <Content Include="SecurityTools\HomeLect.aspx" />
     <Content Include="SecurityTools\HomeStud.aspx" />
@@ -443,12 +445,26 @@
       <DependentUpon>HomeStud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="SecurityTools\LectStat.aspx.cs">
+      <DependentUpon>LectStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityTools\LectStat.aspx.designer.cs">
+      <DependentUpon>LectStat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SecurityTools\Permissions.aspx.cs">
       <DependentUpon>Permissions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SecurityTools\Permissions.aspx.designer.cs">
       <DependentUpon>Permissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityTools\QuizDetails.aspx.cs">
+      <DependentUpon>QuizDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityTools\QuizDetails.aspx.designer.cs">
+      <DependentUpon>QuizDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="SecurityTools\Submenu\PassAttack.aspx.cs">
       <DependentUpon>PassAttack.aspx</DependentUpon>
