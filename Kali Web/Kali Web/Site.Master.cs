@@ -14,14 +14,11 @@ namespace Kali_Web
         protected void Page_Load(object sender, EventArgs e)
         {
             NotLoggedIn.Visible = false;
-            LoggedIn.Visible = false;
-            stud.Visible = false;
-            lect.Visible = false;
+            LoggedInStud.Visible = false;
+            LoggedInLect.Visible = false;
 
             if (Session["email"] != null)
             {
-                LoggedIn.Visible = true;
-
                 String permission = "";
                 SqlConnection myConnection;
                 using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
@@ -42,11 +39,11 @@ namespace Kali_Web
 
                 if (permission.Equals("student"))
                 {
-                    stud.Visible = true;
+                    LoggedInStud.Visible = true;
                 }
                 else if (permission.Equals("lecturer"))
                 {
-                    lect.Visible = true;
+                    LoggedInLect.Visible = true;
                 }
             }
             else

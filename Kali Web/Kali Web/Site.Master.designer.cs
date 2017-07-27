@@ -31,31 +31,22 @@ namespace Kali_Web {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl NotLoggedIn;
         
         /// <summary>
-        /// LoggedIn control.
+        /// LoggedInLect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoggedIn;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoggedInLect;
         
         /// <summary>
-        /// stud control.
+        /// LoggedInStud control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl stud;
-        
-        /// <summary>
-        /// lect control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lect;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoggedInStud;
         
         /// <summary>
         /// MainContent control.
