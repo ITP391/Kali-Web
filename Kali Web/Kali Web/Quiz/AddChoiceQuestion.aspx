@@ -30,7 +30,7 @@
                 <div class="form-group">
                     <asp:Label class="col-xs-3 control-label text-left" Font-Size="20px" ID="Label1" runat="server" Text="Description:"></asp:Label>
                     <div class="col-xs-8">
-                        <asp:TextBox ID="QuestionDescriptionTextBox" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="QuestionDescriptionTextBox" autocomplete="off" runat="server" class="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="QuestionDescriptionTextBox"
                                                     CssClass="text-danger" ErrorMessage="Question description is required." />
                     </div>
@@ -40,7 +40,7 @@
                 <div class="form-group">
                     <asp:Label class="col-xs-3 control-label text-left" Font-Size="20px" ID="Label2" runat="server" Text="Answer 1:"></asp:Label>
                     <div class="col-xs-8">
-                        <asp:TextBox ID="Answer1TextBox" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="Answer1TextBox" autocomplete="off" runat="server" class="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Answer1TextBox"
                                                     CssClass="text-danger" ErrorMessage="All answers are required." />
                     </div>
@@ -50,7 +50,7 @@
                 <div class="form-group">
                     <asp:Label class="col-xs-3 control-label text-left" Font-Size="20px" ID="Label3" runat="server" Text="Answer 2:"></asp:Label>
                     <div class="col-xs-8">
-                        <asp:TextBox ID="Answer2TextBox" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="Answer2TextBox" autocomplete="off" runat="server" class="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Answer2TextBox"
                                                     CssClass="text-danger" ErrorMessage="All answers are required." />
                     </div>
@@ -60,7 +60,7 @@
                 <div class="form-group">
                     <asp:Label class="col-xs-3 control-label text-left" Font-Size="20px" ID="Label4" runat="server" Text="Answer 3:" ></asp:Label>
                     <div class="col-xs-8">
-                        <asp:TextBox ID="Answer3TextBox" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="Answer3TextBox" autocomplete="off" runat="server" class="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Answer3TextBox"
                                                     CssClass="text-danger" ErrorMessage="All answers are required." />
                     </div>
@@ -70,7 +70,7 @@
                 <div class="form-group">
                     <asp:Label class="col-xs-3 control-label text-left" Font-Size="20px" ID="Label5" runat="server" Text="Answer 4:"></asp:Label>
                     <div class="col-xs-8">
-                        <asp:TextBox ID="Answer4TextBox" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="Answer4TextBox" autocomplete="off" runat="server" class="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Answer4TextBox"
                                                     CssClass="text-danger" ErrorMessage="All answers are required." />
                     </div>
@@ -80,7 +80,7 @@
                 <div class="form-group">
                     <asp:Label class="col-xs-3 control-label text-left" Font-Size="20px" ID="Label6" runat="server" Text="Correct answer:"></asp:Label>
                     <div class="col-xs-8">
-                        <asp:TextBox type="number" ID="CorrectAnswerTextBox" runat="server" class="form-control" ></asp:TextBox>
+                        <asp:TextBox type="number" ID="CorrectAnswerTextBox" autocomplete="off" runat="server" class="form-control" ></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="CorrectAnswerTextBox"
                                                     CssClass="text-danger" ErrorMessage="A correct answer is required" />
                         <asp:RangeValidator 
