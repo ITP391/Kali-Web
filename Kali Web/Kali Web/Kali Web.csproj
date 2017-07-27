@@ -324,7 +324,6 @@
     <Content Include="SecurityTools\QuizDetails.aspx" />
     <Content Include="SecurityTools\StudQuizzes.aspx" />
     <Content Include="SecurityTools\HomeLect.aspx" />
-    <Content Include="SecurityTools\HomeStud.aspx" />
     <Content Include="SecurityTools\Permissions.aspx" />
     <Content Include="SecurityTools\SSH\ServerTools.aspx" />
     <Content Include="SecurityTools\SSH\SSHNmap.aspx" />
@@ -336,6 +335,7 @@
     <Content Include="SecurityTools\Submenu\SSHRecon.aspx" />
     <Content Include="SecurityTools\Submenu\Vulnerable.aspx" />
     <Content Include="SecurityTools\ToolUI\Hashcat.aspx" />
+    <Content Include="SecurityTools\HomeStud.aspx" />
     <Content Include="SecurityTools\ToolUI\ncrack.aspx" />
     <Content Include="SecurityTools\ToolUI\nmap.aspx" />
     <Content Include="SecurityTools\ToolUI\nmapVul.aspx" />
@@ -441,10 +441,6 @@
     <Compile Include="SecurityTools\HomeLect.aspx.designer.cs">
       <DependentUpon>HomeLect.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SecurityTools\HomeStud.aspx.cs">
-      <DependentUpon>HomeStud.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="SecurityTools\LectStat.aspx.cs">
       <DependentUpon>LectStat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -493,6 +489,13 @@
     </Compile>
     <Compile Include="SecurityTools\ToolUI\Hashcat.aspx.designer.cs">
       <DependentUpon>Hashcat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityTools\HomeStud.aspx.cs">
+      <DependentUpon>HomeStud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityTools\HomeStud.aspx.designer.cs">
+      <DependentUpon>HomeStud.aspx</DependentUpon>
     </Compile>
     <Compile Include="SecurityTools\ToolUI\ncrack.aspx.cs">
       <DependentUpon>ncrack.aspx</DependentUpon>
