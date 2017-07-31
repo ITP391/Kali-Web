@@ -16,6 +16,7 @@ namespace Kali_Web.Account
 
         public static int count = 0;
         public static String globalinputemail;
+        public static String globaldbpermission;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -80,6 +81,7 @@ namespace Kali_Web.Account
                     Session["name"] = name;
                     Session["permission"] = permission;
                     Session["userPermission"] = permission;
+                    globaldbpermission = dbPermission;
                     
                     if (dbPermission == "student")
                     {

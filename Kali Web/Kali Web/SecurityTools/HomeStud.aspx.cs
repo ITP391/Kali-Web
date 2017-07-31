@@ -13,7 +13,8 @@ namespace Kali_Web.SecurityTools.ToolUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String permission = (String)Session["permission"];
+            //String permission = (String)Session["permission"];
+            String permission = Kali_Web.Account.Login.globaldbpermission;
 
             if (permission == null || permission == "")
             {
