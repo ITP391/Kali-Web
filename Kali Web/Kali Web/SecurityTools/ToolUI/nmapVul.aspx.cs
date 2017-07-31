@@ -30,7 +30,7 @@ namespace Kali_Web.Security_Tools.Tool_UI
             //si.StartInfo.FileName = "~/Security Binaries/Nmap/nmap.exe";
             si.StartInfo.FileName = "C:\\Tmp\\Kali-Web\\Nmap\\nmap.exe";
             //si.StartInfo.Arguments = "/c nmap 127.0.0.1";
-            si.StartInfo.Arguments = "/c nmap -o " + input;
+            si.StartInfo.Arguments = "/c nmap -O " + input;
             si.StartInfo.CreateNoWindow = true;
             si.StartInfo.RedirectStandardInput = true;
             si.StartInfo.RedirectStandardOutput = true;

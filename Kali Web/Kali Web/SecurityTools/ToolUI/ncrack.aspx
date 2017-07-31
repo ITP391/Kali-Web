@@ -27,7 +27,7 @@
                 <div class="col-md-8 col-md-offset-2  form-box" style="text-align: left">
                     <div class="form-group">
 
-                        <asp:Label runat="server" AssociatedControlID="IP" CssClass="col-md-2 control-label">IP Address</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="IPinput" CssClass="col-md-2 control-label">IP Address</asp:Label>
 
                         <div class="input-group">
                             <asp:TextBox runat="server" ID="IPinput" CssClass="form-control" Style="display: inline-block; width: 100%;" />
