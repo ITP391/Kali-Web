@@ -18,7 +18,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT [Category], [Score] FROM [QuizzResult] WHERE ([UserId] = @UserId)">
             <SelectParameters>
-                <asp:Parameter DefaultValue="4" Name="UserId" Type="Int32" />
+                <asp:Parameter DefaultValue="1" Name="UserId" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
         </div>

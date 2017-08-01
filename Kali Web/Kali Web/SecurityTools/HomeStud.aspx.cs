@@ -47,6 +47,8 @@ namespace Kali_Web.SecurityTools.ToolUI
                     PWA.Visible = (Boolean)reader["PWAccess"];
                 }
             }
+
+           
         }
     }
 }
