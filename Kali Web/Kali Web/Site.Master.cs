@@ -13,11 +13,15 @@ namespace Kali_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //String permission = Kali_Web.Account.Login.globaldbpermission;
+            String email = Kali_Web.Account.Login.globalinputemail;
+
             NotLoggedIn.Visible = false;
             LoggedInStud.Visible = false;
             LoggedInLect.Visible = false;
 
-            if (Session["email"] != null)
+            //if (Session["email"] != null)
+            if (email != null)
             {
                 String permission = "";
                 SqlConnection myConnection;
@@ -27,7 +31,7 @@ namespace Kali_Web
                     string query = "SELECT * FROM [User] WHERE [Email_Address] = @Email";
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     myCommand.CommandType = CommandType.Text;
-                    myCommand.Parameters.AddWithValue("@Email", (String)Session["email"]);
+                    myCommand.Parameters.AddWithValue("@Email", email);
 
 
                     SqlDataReader reader = myCommand.ExecuteReader();

@@ -15,7 +15,16 @@ namespace Kali_Web.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            String permission = Kali_Web.Account.Login.globaldbpermission;
 
+            if (permission == null || permission == "")
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
+            else if (permission == "student")
+            {
+                Response.Redirect("HomeStud.aspx");
+            }
         }
         protected void Register_Click(object sender, EventArgs e)
         {
