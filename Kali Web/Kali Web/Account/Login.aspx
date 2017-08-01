@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <!--<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>-->
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>
     <script type="text/javascript">
         var onloadCallback = function () {
             grecaptcha.render('dvCaptcha', {
@@ -10,7 +10,7 @@
                 'callback': function (response) {
                     $.ajax({
                         type: "POST",
-                        url: "Default.aspx/VerifyCaptcha",
+                        url: "Login.aspx/VerifyCaptcha",
                         data: "{response: '" + response + "'}",
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
@@ -75,8 +75,9 @@
                 <div class="col-xs-8 col-xs-offset-3">
                     <!--<asp:CheckBox ID="CheckBox1" runat="server" Text=" Remember Me?" />-->
                     <div class="g-recaptcha" data-sitekey="6Le2QysUAAAAAJuMqCdo8wDVETXyrDPTtP4LjeRc"></div>
-                    <asp:TextBox ID="txtCaptcha" runat="server" Style="display: none" />
-                    <asp:RequiredFieldValidator ID = "rfvCaptcha" ErrorMessage="Captcha validation is required." ControlToValidate="txtCaptcha" runat="server" ForeColor = "Red" Display = "Dynamic" />
+                    <!--<asp:TextBox ID="txtCaptcha" runat="server" Style="display: none" />
+                    <asp:RequiredFieldValidator ID = "rfvCaptcha" ErrorMessage="Captcha validation is required." ControlToValidate="txtCaptcha" runat="server" ForeColor = "Red" Display = "Dynamic" />-->
+                    <asp:Label ID="error" Text="Captcha validation is required" ForeColor="Red" runat="server" Visible="False" />
                 </div>
             </div>
 
