@@ -41,7 +41,10 @@
                             </span>
                         </div>
 
-                        <asp:TextBox ID="Output" runat="server" CssClass="form-control form-textarea" TextMode="MultiLine" Height="252px" Width="" ReadOnly="True"></asp:TextBox>
+                        <asp:TextBox ID="Output" runat="server" CssClass="form-control form-textarea" TextMode="MultiLine" Height="252px" Width=""></asp:TextBox>
+
+                        <asp:Label runat="server" AssociatedControlID="Result" CssClass="col-md-2 control-label middle-label">Result</asp:Label>
+                        <asp:TextBox runat="server" ID="Result" CssClass="form-control" Style="display: inline-block; width: 100%;" ReadOnly="True" />
                     </div>
                 </div>
             </div>

@@ -45,7 +45,7 @@
             <div class="box">
                 <div class="ribbon ribbon-blue">Student Permissions</div>
                 <div class="box-content">
-                    <p>Test</p>
+                    <p>Edit students' access to security tools</p>
                 </div>
             </div>
         </div>
