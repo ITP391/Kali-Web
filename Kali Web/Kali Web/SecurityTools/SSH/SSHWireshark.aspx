@@ -35,7 +35,7 @@
                             </span>
                         </div>
 
-                        <asp:TextBox ID="Output" runat="server" CssClass="form-control form-textarea" TextMode="MultiLine" Height="252px" Width=""></asp:TextBox>
+                        <asp:TextBox ID="Output" runat="server" CssClass="form-control form-textarea" TextMode="MultiLine" Height="252px" Width="" ReadOnly="True"></asp:TextBox>
                     </div>
                 </div>
             </div>
