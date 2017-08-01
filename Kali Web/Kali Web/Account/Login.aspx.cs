@@ -8,6 +8,8 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
+using System.Web.Services;
 
 namespace Kali_Web.Account
 {
@@ -17,6 +19,8 @@ namespace Kali_Web.Account
         public static int count = 0;
         public static String globalinputemail;
         public static String globaldbpermission;
+        protected static string ReCaptcha_Key = "6Le2QysUAAAAAJuMqCdo8wDVETXyrDPTtP4LjeRc";
+        protected static string ReCaptcha_Secret = "6Le2QysUAAAAAHhD4Y36WruQR807tLRlI-y0UJZO";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -113,6 +117,13 @@ namespace Kali_Web.Account
             Byte[] hashedBytes = algorithm.ComputeHash(saltedInput);
 
             return BitConverter.ToString(hashedBytes);
+        }
+
+        [WebMethod]
+        public static string VerifyCaptcha(string response)
+        {
+            string url = "https://www.google.com/recaptcha/api/siteverify?secret=" + ReCaptcha_Secret + "&response=" + response;
+            return (new WebClient()).DownloadString(url);
         }
     }
 }
