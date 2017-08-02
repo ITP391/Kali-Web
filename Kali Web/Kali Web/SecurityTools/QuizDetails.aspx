@@ -30,7 +30,10 @@
             <div class ="ribbon ribbon-orange">Your Grade</div>
             <div class ="box-content">
             <br />
-       <p>- ...................... A</p>
+           <asp:Label ID="percentage" style="text-align:center" runat="server"></asp:Label>
+       <p> 
+           <asp:Label ID="grade" runat="server" Text="-"></asp:Label>
+           ...................... A</p>
     </div>
     </div>
   </div>

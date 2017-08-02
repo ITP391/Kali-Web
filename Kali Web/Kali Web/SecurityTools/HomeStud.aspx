@@ -60,7 +60,7 @@
                        33%
                 </div>
             </div> 
-                    <p class="tool-link"><a href="/SecurityTools/QuizDetails.aspx" class="button">Click Here for more</a></p>
+                    <p class="tool-link"><a href="/SecurityTools/QuizDetails.aspx" class="button" style="left: 0px; top: 0px">Click Here for more</a></p>
                 </div>
             </div>
         <div class="col-md-4">
@@ -68,7 +68,7 @@
                 <div class="ribbon ribbon-blue">Your Quizzes</div>
                 <div class="box-content">
                     <p>Complete these quizzes to make sure you understand the usage of the tools!</p>
-                    <p class="tool-link"><a href="/SecurityTools/StudQuizzes.aspx" class="button">Click Here for Quizes!</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/StudQuizzes.aspx" class="button">Click Here for Quizzes!</a> </p>
                 </div>
             </div>
             </div>

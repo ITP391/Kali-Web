@@ -46,9 +46,10 @@ namespace Kali_Web.SecurityTools.ToolUI
                     IGA.Visible = (Boolean)reader["IGAccess"];
                     PWA.Visible = (Boolean)reader["PWAccess"];
                 }
+
             }
 
            
         }
     }
-}
+}  
