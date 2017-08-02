@@ -17,6 +17,7 @@ namespace Kali_Web.SecurityTools
         {
             if (result < 2){
                 grade.Text = "test";
+                percentage.Text = "test%";
             }
         }
     }

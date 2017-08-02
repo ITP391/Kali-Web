@@ -16,6 +16,10 @@
                 </asp:BoundField>
             </Columns>
         </asp:GridView>
+         <br>
+            <p style="color:gray; text-align:left;">IG - Information Gathering</p>
+            <p style="color:gray; text-align:left;">VA - Vulnerability Access</p>
+            <p style="color:gray; text-align:left;">PA - Password Attack</p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT [Category], [Score] FROM [QuizzResult] WHERE ([UserId] = @UserId)">
             <SelectParameters>
                 <asp:Parameter DefaultValue="1" Name="UserId" Type="Int32" />
