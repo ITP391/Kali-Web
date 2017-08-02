@@ -1,6 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HomeLect.aspx.cs" Inherits="Kali_Web.Security_Tools.HomeLect" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+            <div class="btn-group" style="margin-top: 20px">
+                <a href="../Announcements/AddAnnouncement.aspx">
+                    <button class="btn btn-default btn-lg" type="button" >
+                        Add announcement
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
     <!-- add some codes for teacher side - add show/hide buttons, add list of students-->
     <div class="row main-content">
         <div class="col-md-4">
