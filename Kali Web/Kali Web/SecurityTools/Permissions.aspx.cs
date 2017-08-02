@@ -14,6 +14,19 @@ namespace Kali_Web.Security_Tools
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Uses global variable to check for session. This part checks if permission is lect, if it is student,
+            // redirect to Student's Home Page
+            String permission = Kali_Web.Account.Login.globaldbpermission;
+
+            if (permission == null || permission == "")
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
+            else if (permission == "student")
+            {
+                Response.Redirect("HomeStud.aspx");
+            }
+
             if (!IsPostBack)
             {
                 Boolean IGAccess = false;

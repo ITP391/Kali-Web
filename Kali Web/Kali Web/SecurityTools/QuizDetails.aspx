@@ -16,9 +16,13 @@
                 </asp:BoundField>
             </Columns>
         </asp:GridView>
+         <br>
+            <p style="color:gray; text-align:left;">IG - Information Gathering</p>
+            <p style="color:gray; text-align:left;">VA - Vulnerability Access</p>
+            <p style="color:gray; text-align:left;">PA - Password Attack</p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT [Category], [Score] FROM [QuizzResult] WHERE ([UserId] = @UserId)">
             <SelectParameters>
-                <asp:Parameter DefaultValue="4" Name="UserId" Type="Int32" />
+                <asp:Parameter DefaultValue="1" Name="UserId" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
         </div>
@@ -30,7 +34,10 @@
             <div class ="ribbon ribbon-orange">Your Grade</div>
             <div class ="box-content">
             <br />
-       <p>- ...................... A</p>
+           <asp:Label ID="percentage" style="text-align:center" runat="server"></asp:Label>
+       <p> 
+           <asp:Label ID="grade" runat="server" Text="-"></asp:Label>
+           ...................... A</p>
     </div>
     </div>
   </div>

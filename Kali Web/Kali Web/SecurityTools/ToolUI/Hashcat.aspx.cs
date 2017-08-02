@@ -55,7 +55,7 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
 
 
-            Output.Text += passwordresult;
+            Result.Text = passwordresult;
         }
     }
 }

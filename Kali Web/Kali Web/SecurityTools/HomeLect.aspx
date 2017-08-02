@@ -57,7 +57,8 @@
             <div class="box">
                 <div class="ribbon ribbon-blue">Student Permissions</div>
                 <div class="box-content">
-                    <p>Test</p>
+                    <p>Edit students' access to security tools</p>
+                    <p class="tool-link"><a href="/SecurityTools/ModGrps.aspx" class="button">By Module Group</a></p>
                 </div>
             </div>
         </div>

@@ -15,7 +15,12 @@ namespace Kali_Web.Security_Tools.Tool_UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            String permission = Kali_Web.Account.Login.globaldbpermission;
 
+            if (permission == null || permission == "")
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)

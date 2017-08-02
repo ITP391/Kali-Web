@@ -71,8 +71,10 @@
                                 <div class="left home">
                                         <h2 class="cust-menu-h2"><a href="/Default.aspx" style="padding-left: 40px;">Home</a></h2>
                                         <h2 class="cust-menu-h2"><a href="/About.aspx" style="padding-left: 20px;">About</a></h2>
-                                        <h2 class="cust-menu-h2"><a href="/Security Tools/HomeLect.aspx" style="padding-left: 20px;">Security Tools</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/SecurityTools/HomeLect.aspx" style="padding-left: 20px;">Dashboard</a></h2>
                                         <h2 class="cust-menu-h2"><a href="/Account/Register.aspx" style="padding-left: 20px;">Create Student Account</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/SecurityTools/SSH/ServerTools.aspx" style="padding-left: 20px;">Server Management</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/SecurityTools/Submenu/SSHRecon.aspx" style="padding-left: 20px;">SSH Tools</a></h2>
                                     </div>
                                     <div class="icon-list right">
                                 <ul>
@@ -84,7 +86,7 @@
                                 <div class="left home">
                                         <h2 class="cust-menu-h2"><a href="/Default.aspx" style="padding-left: 40px;">Home</a></h2>
                                         <h2 class="cust-menu-h2"><a href="/About.aspx" style="padding-left: 20px;">About</a></h2>
-                                        <h2 class="cust-menu-h2"><a href="/Security Tools/HomeStud.aspx" style="padding-left: 20px;">Security Tools</a></h2>
+                                        <h2 class="cust-menu-h2"><a href="/Security Tools/HomeStud.aspx" style="padding-left: 20px;">Dashboard</a></h2>
                                     </div>
                                     <div class="icon-list right">
                                 <ul>

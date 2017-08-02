@@ -39,22 +39,38 @@
                 <div class="ribbon ribbon-orange">Your Progress</div>
                 <br />
                 <div class="box-content">
-                    <div class="meter-value" style="background-color: #0a0; width: 90%; text-align:center; margin:auto;">
+                    
+         <%--           <div class="meter-value" style="background-color: #0a0; width: 3%; text-align:center; margin:auto;">
+            <div class="meter-text">
+                       0%
+                </div>
+            </div>
+              <div class="meter-value" style="background-color: #0a0; width: 90%; text-align:center; margin:auto;">
             <div class="meter-text">
                        100%
                 </div>
             </div>
-                    <p class="tool-link"><a href="/SecurityTools/QuizDetails.aspx" class="button">Click Here for more</a></p>
+                    <div class="meter-value" style="background-color: #0a0; width: 60%; text-align:center; margin:auto;">
+            <div class="meter-text">
+                       66%
+                </div>
+            </div>--%>
+                    <div class="meter-value" style="background-color: #0a0; width: 30%; text-align:center; margin:auto;">
+            <div class="meter-text">
+                       33%
+                </div>
+            </div> 
+                    <p class="tool-link"><a href="/SecurityTools/QuizDetails.aspx" class="button" style="left: 0px; top: 0px">Click Here for more</a></p>
                 </div>
             </div>
-        </div>
         <div class="col-md-4">
             <div class="box">
                 <div class="ribbon ribbon-blue">Your Quizzes</div>
                 <div class="box-content">
                     <p>Complete these quizzes to make sure you understand the usage of the tools!</p>
-                    <p class="tool-link"><a href="/SecurityTools/StudQuizzes.aspx" class="button">Click Here for Quizes!</a> </p>
+                    <p class="tool-link"><a href="/SecurityTools/StudQuizzes.aspx" class="button">Click Here for Quizzes!</a> </p>
                 </div>
+            </div>
             </div>
         </div>
     </div>

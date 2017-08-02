@@ -49,4 +49,4 @@ namespace Kali_Web.SecurityTools.ToolUI
             }
         }
     }
-}
+}  

@@ -8,6 +8,11 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
+using System.Web.Services;
+using System.Collections.Specialized;
+using System.IO;
+using System.Web.Script.Serialization;
 
 namespace Kali_Web.Account
 {
@@ -17,6 +22,8 @@ namespace Kali_Web.Account
         public static int count = 0;
         public static String globalinputemail;
         public static String globaldbpermission;
+        protected static string ReCaptcha_Key = "6Le2QysUAAAAAJuMqCdo8wDVETXyrDPTtP4LjeRc";
+        protected static string ReCaptcha_Secret = "6Le2QysUAAAAAHhD4Y36WruQR807tLRlI-y0UJZO";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -82,15 +89,27 @@ namespace Kali_Web.Account
                     Session["permission"] = permission;
                     Session["userPermission"] = permission;
                     globaldbpermission = dbPermission;
+
+                    bool result = CaptchaValidate();
+
+                    if (result == true)
+                    {
+                        if (dbPermission == "student")
+                        {
+                            Response.Redirect("/SecurityTools/HomeStud.aspx");
+                        }
+                        else if (dbPermission == "lecturer")
+                        {
+                            Response.Redirect("/SecurityTools/HomeLect.aspx");
+                        }
+                    }
+
+                    else
+                    {
+                        error.Visible = true;
+                    }
+
                     
-                    if (dbPermission == "student")
-                    {
-                        Response.Redirect("/SecurityTools/HomeStud.aspx");
-                    }
-                    else if (dbPermission == "lecturer")
-                    {
-                        Response.Redirect("/SecurityTools/HomeLect.aspx");
-                    }
                 }
 
                 //Either email/password wrong, shows this
@@ -113,6 +132,43 @@ namespace Kali_Web.Account
             Byte[] hashedBytes = algorithm.ComputeHash(saltedInput);
 
             return BitConverter.ToString(hashedBytes);
+        }
+
+        public bool CaptchaValidate()
+        {
+            string Response = Request["g-recaptcha-response"];//Getting Response String Append to Post Method
+            bool Valid = false;
+            //Request to Google Server
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create
+            (" https://www.google.com/recaptcha/api/siteverify?secret=6Le2QysUAAAAAHhD4Y36WruQR807tLRlI-y0UJZO&response=" + Response);
+            try
+            {
+                //Google recaptcha Response
+                using (WebResponse wResponse = req.GetResponse())
+                {
+
+                    using (StreamReader readStream = new StreamReader(wResponse.GetResponseStream()))
+                    {
+                        string jsonResponse = readStream.ReadToEnd();
+
+                        JavaScriptSerializer js = new JavaScriptSerializer();
+                        MyObject data = js.Deserialize<MyObject>(jsonResponse);// Deserialize Json
+
+                        Valid = Convert.ToBoolean(data.success);
+                    }
+                }
+
+                return Valid;
+            }
+            catch (WebException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public class MyObject
+        {
+            public string success { get; set; }
         }
     }
 }
