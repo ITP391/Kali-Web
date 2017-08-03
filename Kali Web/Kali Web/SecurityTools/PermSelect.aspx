@@ -4,7 +4,7 @@
     <div class="row main-content">
         <div class="col-md-4">
             <div class="box">
-                <div class="ribbon ribbon-blue">Permissions</div>
+                <div class="ribbon ribbon-blue">Individual</div>
                 <div class="box-content">
                     <p>Set permissions by individuals</p>
                     <p class="tool-link"><a href="/SecurityTools/Permissions.aspx" class="button">Go</a> </p>
@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-4">
             <div class="box">
-                <div class="ribbon ribbon-green">Permissions</div>
+                <div class="ribbon ribbon-green">Group</div>
                 <div class="box-content">
                     <p>Set permissions by module groups</p>
                     <p class="tool-link">          
