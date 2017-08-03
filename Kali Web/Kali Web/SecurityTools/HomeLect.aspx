@@ -4,9 +4,9 @@
     <div class="row">
         <div class="col-md-2 col-md-offset-5">
             <div class="btn-group" style="margin-top: 20px">
-                <a href="../Announcements/AddAnnouncement.aspx">
+                <a href="../Announcements/ConfigureAnnouncement.aspx">
                     <button class="btn btn-default btn-lg" type="button" >
-                        Add announcement
+                        Announcements
                     </button>
                 </a>
             </div>

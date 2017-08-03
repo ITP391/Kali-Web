@@ -49,6 +49,15 @@ namespace Kali_Web.Announcements {
         protected global::System.Web.UI.WebControls.TextBox StartDateTextBox;
         
         /// <summary>
+        /// LabelStartDateError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelStartDateError;
+        
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace Kali_Web.Announcements {
         protected global::System.Web.UI.WebControls.TextBox EndDateTextBox;
         
         /// <summary>
+        /// LabelEndDateError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelEndDateError;
+        
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -74,14 +92,5 @@ namespace Kali_Web.Announcements {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// AnnouncementRepeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater AnnouncementRepeater;
     }
 }
