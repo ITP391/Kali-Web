@@ -89,6 +89,7 @@ namespace Kali_Web.Account
                     Session["permission"] = permission;
                     Session["userPermission"] = permission;
                     globaldbpermission = dbPermission;
+                    globalinputemail = dbEmail;
 
                     bool result = CaptchaValidate();
 

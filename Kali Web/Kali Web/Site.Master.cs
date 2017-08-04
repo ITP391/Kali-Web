@@ -21,7 +21,11 @@ namespace Kali_Web
             LoggedInLect.Visible = false;
 
             //if (Session["email"] != null)
-            if (email != null)
+            if (email == null || email == "")
+            {
+                NotLoggedIn.Visible = true;
+            }
+            else if (email != null || email != "")
             {
                 String permission = "";
                 SqlConnection myConnection;
@@ -49,10 +53,6 @@ namespace Kali_Web
                 {
                     LoggedInLect.Visible = true;
                 }
-            }
-            else
-            {
-                NotLoggedIn.Visible = true;
             }
         }
     }

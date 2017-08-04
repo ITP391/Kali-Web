@@ -11,7 +11,7 @@ namespace Kali_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Kali_Web.Account.Login.globalinputemail = null;
         }
     }
 }
