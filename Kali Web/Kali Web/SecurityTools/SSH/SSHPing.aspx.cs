@@ -31,18 +31,18 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
             SshClient ssh = new SshClient(host, user, password);
 
-            using (var client = new SshClient(host, user, password))
+            using (ssh)
             {
-                client.Connect();
+                ssh.Connect();
 
                 Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n\n";
 
-                var terminal = client.RunCommand("ping -c 4 " + userinputip);
+                var terminal = ssh.RunCommand("ping -c 4 " + userinputip);
 
                 var output = terminal.Result;
 
                 Output.Text += output;
-                client.Disconnect();
+                ssh.Disconnect();
             }
         }
     }

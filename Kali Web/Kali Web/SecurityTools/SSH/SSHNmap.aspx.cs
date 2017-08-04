@@ -50,18 +50,18 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
             SshClient ssh = new SshClient(host, user, password);
 
-            using (var client = new SshClient(host, user, password))
+            using (ssh)
             {
-                client.Connect();
+                ssh.Connect();
 
                 Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n";
             
-                var terminal = client.RunCommand("nmap " + userinputip);
+                var terminal = ssh.RunCommand("nmap " + userinputip);
 
                 var output = terminal.Result;
 
                 Output.Text += output;
-                client.Disconnect();
+                ssh.Disconnect();
             }
         }
     }

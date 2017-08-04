@@ -29,9 +29,9 @@
                         <asp:Label runat="server" AssociatedControlID="IP" CssClass="col-md-2 control-label middle-label">IP Address</asp:Label>
 
                         <div class="input-group">
-                            <asp:TextBox runat="server" ID="IP" CssClass="form-control" Style="display: inline-block; width: 100%;" />
+                            <!--<asp:TextBox runat="server" ID="IP" CssClass="form-control" Style="display: inline-block; width: 100%;" />-->
                             <span class="input-group-btn">
-                                <asp:Button runat="server" Text="Find" CssClass="btn btn-default" OnClick="Unnamed3_Click" />
+                                <asp:Button runat="server" Text="Find" CssClass="btn btn-default" OnClick="Unnamed3_Click" Style="display: inline-block; width: 100%;" />
                             </span>
                         </div>
 

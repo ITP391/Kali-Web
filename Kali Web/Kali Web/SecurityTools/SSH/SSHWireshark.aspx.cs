@@ -12,12 +12,12 @@ namespace Kali_Web.Security_Tools.Tool_UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String permission = Kali_Web.Account.Login.globaldbpermission;
+            /*String permission = Kali_Web.Account.Login.globaldbpermission;
 
             if (permission == null || permission == "")
             {
                 Response.Redirect("/Account/Login.aspx");
-            }
+            }*/
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)
@@ -31,18 +31,18 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
             SshClient ssh = new SshClient(host, user, password);
 
-            using (var client = new SshClient(host, user, password))
+            using (ssh)
             {
-                client.Connect();
+                ssh.Connect();
 
                 Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n";
 
-                var terminal = client.RunCommand("tshark -a duration:60");
+                var terminal = ssh.RunCommand("tshark -a duration:60");
 
                 var output = terminal.Result;
 
                 Output.Text += output;
-                client.Disconnect();
+                ssh.Disconnect();
             }
         }
     }

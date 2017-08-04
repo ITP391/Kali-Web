@@ -37,15 +37,15 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
             SshClient ssh = new SshClient(host, user, password);
 
-            using (var client = new SshClient(host, user, password))
+            using (ssh)
             {
                 try
                 {
-                    client.Connect();
+                    ssh.Connect();
 
-                    client.RunCommand("shutdown now");
+                    ssh.RunCommand("shutdown now");
 
-                    client.Disconnect();
+                    ssh.Disconnect();
                 } catch
                 {
                     Output.Text = "Server shutting down now...\nPlease contact your administrator to start the server again.";

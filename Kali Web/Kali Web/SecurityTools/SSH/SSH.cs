@@ -18,16 +18,16 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
             SshClient ssh = new SshClient(host, user, password);
 
-            using (var client = new SshClient(host, user, password))
+            using (ssh)
             {
-                client.Connect();
+                ssh.Connect();
 
-                var terminal = client.RunCommand(command);
+                var terminal = ssh.RunCommand(command);
 
                 var output = terminal.Result;
 
                 result = output;
-                client.Disconnect();
+                ssh.Disconnect();
             }
 
             return result;
