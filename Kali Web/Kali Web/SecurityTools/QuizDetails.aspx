@@ -17,27 +17,17 @@
             </Columns>
         </asp:GridView>
             <br />
-            <asp:Table ID="quizTable" runat="server" Height="111px" Width="265px">
-               <asp:TableHeaderRow= runat="server">
-                <asp:TableHeaderCell>Quiz</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Score</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Time</asp:TableHeaderCell>
-            </asp:TableHeaderRow>
-                <asp:TableRow= runat="server">
-                    <asp:TableCell="Password Attack"></asp:TableCell>
-                    <asp:TableCell="2/3"></asp:TableCell>
-                    <asp:TableCell="30 seconds"></asp:TableCell>
-                </asp:TableRow>
-            </asp:Table>
-         <br>
+           
             <p style="color:gray; text-align:left;">IG - Information Gathering</p>
             <p style="color:gray; text-align:left;">VA - Vulnerability Access</p>
             <p style="color:gray; text-align:left;">PA - Password Attack</p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT [Category], [Score] FROM [QuizzResult] WHERE ([UserId] = @UserId)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" 
+            SelectCommand="SELECT [Category], [Score] FROM [QuizzResult] WHERE ([UserId] = @UserId)">
         <SelectParameters>
-              <asp:Parameter DefaultValue="1" Name="UserId" Type="Int32" />
+               <asp:Parameter DefaultValue="7" Name="UserId" Type="Int32" />
             </SelectParameters> 
         </asp:SqlDataSource>
+
         </div>
         </div>
     </div>
@@ -48,8 +38,8 @@
             <div class ="box-content">
             <br />
        <p> 
-           Your Current Grade is:
-           <asp:Label ID="grade" runat="server" Font-Italic="True" ForeColor="#333333" Text="Complete all quizzes"></asp:Label>
+           Your Current Grade:
+           <asp:Label ID="grade" runat="server" Font-Italic="True" ForeColor="#333333" Text="Not available"></asp:Label>
                 </p>
     </div>
     </div>

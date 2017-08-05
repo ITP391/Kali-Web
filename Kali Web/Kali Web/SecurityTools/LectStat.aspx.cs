@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,18 @@ namespace Kali_Web.SecurityTools
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            SqlConnection myConnection;
+            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager
+                .ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                myConnection.Open();
+                string query = "SELECT * FROM [User] WHERE [Email_Address] = @email";
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlDataReader reader = myCommand.ExecuteReader();
 
+                myConnection.Close();
+                return;
+            }
         }
     }
 }
