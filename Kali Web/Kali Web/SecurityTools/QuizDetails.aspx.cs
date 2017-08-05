@@ -11,36 +11,47 @@ namespace Kali_Web.SecurityTools
 {
     public partial class QuizDetails : System.Web.UI.Page
     {
-         int totalMarks;
+        int totalMarks;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            String sessionemail = (String)Session["email"];
-            SqlConnection myConnection;
-            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
-            {
-                string query = "SELECT COUNT(DISTINCT Category) AS Count FROM [QuizzResult] WHERE [UserId] = (SELECT Id FROM [User] WHERE [Email_Address]= @email)";
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
-                myCommand.CommandType = CommandType.Text;
-                myCommand.Parameters.AddWithValue("@email", sessionemail);
-                myConnection.Open();
-                SqlDataReader reader = myCommand.ExecuteReader();
+            String permission = Kali_Web.Account.Login.globaldbpermission;
 
-                if (totalMarks < 4)
+            if (permission == null || permission == "")
             {
-                grade.Text = "F";
-            }
-            if((totalMarks > 3) && (totalMarks < 6))
-            {
-                grade.Text = "C";
-            }
-            if ((totalMarks > 5) && (totalMarks < 8))
-            {
-                grade.Text = "B";
+                Response.Redirect("/Account/Login.aspx");
             }
             else
             {
-                grade.Text = "A";
+                //String sessionemail = (String)Session["email"];
+                String sessionemail = Kali_Web.Account.Login.globalinputemail;
+                SqlConnection myConnection;
+                using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+                {
+                    string query = "SELECT COUNT(DISTINCT Category) AS Count FROM [QuizzResult] WHERE [UserId] = (SELECT Id FROM [User] WHERE [Email_Address]= @email)";
+                    SqlCommand myCommand = new SqlCommand(query, myConnection);
+                    myCommand.CommandType = CommandType.Text;
+                    myCommand.Parameters.AddWithValue("@email", sessionemail);
+                    myConnection.Open();
+                    SqlDataReader reader = myCommand.ExecuteReader();
+
+                    if (totalMarks < 4)
+                    {
+                        grade.Text = "F";
+                    }
+                    if ((totalMarks > 3) && (totalMarks < 6))
+                    {
+                        grade.Text = "C";
+                    }
+                    if ((totalMarks > 5) && (totalMarks < 8))
+                    {
+                        grade.Text = "B";
+                    }
+                    else
+                    {
+                        grade.Text = "A";
+                    }
+                }
             }
         }
     }
