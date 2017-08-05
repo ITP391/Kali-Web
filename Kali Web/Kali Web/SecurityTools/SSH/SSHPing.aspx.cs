@@ -12,6 +12,7 @@ namespace Kali_Web.Security_Tools.Tool_UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label4.Visible = false;
             String permission = Kali_Web.Account.Login.globaldbpermission;
 
             if (permission == null || permission == "")
@@ -28,22 +29,48 @@ namespace Kali_Web.Security_Tools.Tool_UI
             String user = "root";
             String password = "root";
             String userinputip = IP.Text;
+            bool userinputipcheck = ValidateIPv4(userinputip);
 
             SshClient ssh = new SshClient(host, user, password);
 
-            using (ssh)
+            if (userinputipcheck == true)
             {
-                ssh.Connect();
+                using (ssh)
+                {
+                    ssh.Connect();
 
-                Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n\n";
+                    Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n\n";
 
-                var terminal = ssh.RunCommand("ping -c 4 " + userinputip);
+                    var terminal = ssh.RunCommand("ping -c 4 " + userinputip);
 
-                var output = terminal.Result;
+                    var output = terminal.Result;
 
-                Output.Text += output;
-                ssh.Disconnect();
+                    Output.Text += output;
+                    ssh.Disconnect();
+                }
             }
+            else if (userinputipcheck == false)
+            {
+                Label4.Visible = true;
+            }
+        }
+
+        public bool ValidateIPv4(string ipString)
+        {
+            if (String.IsNullOrWhiteSpace(ipString))
+            {
+                return false;
+            }
+
+            string[] splitValues = ipString.Split('.');
+            if (splitValues.Length != 4)
+            {
+                return false;
+            }
+
+            byte tempForParsing;
+
+            return splitValues.All(r => byte.TryParse(r, out tempForParsing));
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Kali_Web.Security_Tools.Tool_UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label4.Visible = false;
             String permission = Kali_Web.Account.Login.globaldbpermission;
 
             if (permission == null || permission == "")
@@ -25,44 +26,54 @@ namespace Kali_Web.Security_Tools.Tool_UI
 
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
-            /* System.Diagnostics.Process si = new System.Diagnostics.Process();
-            //si.StartInfo.WorkingDirectory = "~/Security Binaries/Nmap/";
-            si.StartInfo.UseShellExecute = false;
-            //si.StartInfo.FileName = "~/Security Binaries/Nmap/nmap.exe";
-            si.StartInfo.FileName = "C:\\Tmp\\Kali-Web\\plink\\plink.exe";
-            si.StartInfo.Arguments = "/c plink root@192.168.127.146 -pw root";
-            si.StartInfo.CreateNoWindow = true;
-            si.StartInfo.RedirectStandardInput = true;
-            si.StartInfo.RedirectStandardOutput = true;
-            si.StartInfo.RedirectStandardError = true;
-            si.Start();
-            string output = si.StandardOutput.ReadToEnd();
-            si.Close();
-
-            Output.Text = output; */
-
             Output.Text = "";
 
             String host = "192.168.127.151";
             String user = "root";
             String password = "root";
             String userinputip = IP.Text;
+            bool userinputipcheck = ValidateIPv4(userinputip);
 
             SshClient ssh = new SshClient(host, user, password);
 
-            using (ssh)
+            if (userinputipcheck == true)
             {
-                ssh.Connect();
+                using (ssh)
+                {
+                    ssh.Connect();
 
-                Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n";
-            
-                var terminal = ssh.RunCommand("nmap " + userinputip);
+                    Output.Text = "Connected to Remote Kali Linux Server. Command is now running...\n";
 
-                var output = terminal.Result;
+                    var terminal = ssh.RunCommand("nmap " + userinputip);
 
-                Output.Text += output;
-                ssh.Disconnect();
+                    var output = terminal.Result;
+
+                    Output.Text += output;
+                    ssh.Disconnect();
+                }
             }
+            else if (userinputipcheck == false)
+            {
+                Label4.Visible = true;
+            }
+        }
+
+        public bool ValidateIPv4(string ipString)
+        {
+            if (String.IsNullOrWhiteSpace(ipString))
+            {
+                return false;
+            }
+
+            string[] splitValues = ipString.Split('.');
+            if (splitValues.Length != 4)
+            {
+                return false;
+            }
+
+            byte tempForParsing;
+
+            return splitValues.All(r => byte.TryParse(r, out tempForParsing));
         }
     }
 }

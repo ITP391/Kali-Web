@@ -29,6 +29,7 @@
             <div class="col-md-12">
                 <%-- col-md-offset-2 added to center the box that has 8cols --%>
                 <div class="col-md-8 col-md-offset-2  form-box" style="text-align: left">
+                    <asp:Label ID="Label4" runat="server" CssClass="text-danger" Visible="False">Please input a valid IP address</asp:Label>
                     <div class="form-group">
 
                         <asp:Label runat="server" AssociatedControlID="Hash" CssClass="col-md-2 control-label middle-label">Hash</asp:Label>

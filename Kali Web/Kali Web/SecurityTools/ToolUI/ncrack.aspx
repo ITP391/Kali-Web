@@ -25,6 +25,7 @@
         <div class="row" style="padding: 10px; padding-top: 20px;">
             <div class="col-md-12">
                 <div class="col-md-8 col-md-offset-2  form-box" style="text-align: left">
+                    <asp:Label ID="Label4" runat="server" CssClass="text-danger" Visible="False">Please input a valid IP address</asp:Label>
                     <div class="form-group">
 
                         <asp:Label runat="server" AssociatedControlID="IPinput" CssClass="col-md-2 control-label">IP Address</asp:Label>
