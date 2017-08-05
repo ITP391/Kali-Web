@@ -134,6 +134,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\SuccessfulRegistration.aspx" />
     <Content Include="Announcements\AddAnnouncement.aspx" />
+    <Content Include="Announcements\AnswerAnnouncement.aspx" />
     <Content Include="Announcements\ConfigureAnnouncement.aspx" />
     <Content Include="App_Data\KaliWeb.mdf" />
     <Content Include="App_Data\KaliWeb_log.ldf">
@@ -382,6 +383,13 @@
     </Compile>
     <Compile Include="Announcements\Announcement.cs" />
     <Compile Include="Announcements\AnnouncementAnswer.cs" />
+    <Compile Include="Announcements\AnswerAnnouncement.aspx.cs">
+      <DependentUpon>AnswerAnnouncement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Announcements\AnswerAnnouncement.aspx.designer.cs">
+      <DependentUpon>AnswerAnnouncement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Announcements\ConfigureAnnouncement.aspx.cs">
       <DependentUpon>ConfigureAnnouncement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

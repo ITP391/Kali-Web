@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Kali_Web.Announcements;
 
 namespace Kali_Web.SecurityTools.ToolUI
 {
@@ -13,6 +14,8 @@ namespace Kali_Web.SecurityTools.ToolUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var announcementList = new List<Announcement>();
+
             //String permission = (String)Session["permission"];
             String permission = Kali_Web.Account.Login.globaldbpermission;
 
@@ -25,11 +28,12 @@ namespace Kali_Web.SecurityTools.ToolUI
                 Response.Redirect("HomeLect.aspx");
             }
 
-            String sessionemail = (String)Session["email"];
+            String sessionemail = (String) Session["email"];
 
 
             SqlConnection myConnection;
-            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager
+                .ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 myConnection.Open();
 
@@ -42,10 +46,38 @@ namespace Kali_Web.SecurityTools.ToolUI
 
                 if (reader.Read())
                 {
-                    VAA.Visible = (Boolean)reader["VAAccess"];
-                    IGA.Visible = (Boolean)reader["IGAccess"];
-                    PWA.Visible = (Boolean)reader["PWAccess"];
+                    VAA.Visible = (Boolean) reader["VAAccess"];
+                    IGA.Visible = (Boolean) reader["IGAccess"];
+                    PWA.Visible = (Boolean) reader["PWAccess"];
                 }
+            }
+
+            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager
+                .ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                myConnection.Open();
+
+                string query = " SELECT *" +
+                               " FROM [dbo].[Announcements] a";
+
+                SqlCommand command = new SqlCommand(query, myConnection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        var id = int.Parse(reader["Id"].ToString());
+                        var description = reader["Description"].ToString();
+                        var startDate = DateTime.Parse(reader["StartDate"].ToString()).ToShortDateString();
+                        var endDate = DateTime.Parse(reader["EndDate"].ToString()).ToShortDateString();
+
+                        announcementList.Add(new Announcement(id, description, startDate, endDate));
+                    }
+                }
+
+                AnnouncementRepeater.DataSource = announcementList;
+                AnnouncementRepeater.DataBind();
             }
         }
     }

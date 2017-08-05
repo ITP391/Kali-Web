@@ -1,6 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HomeStud.aspx.cs" Inherits="Kali_Web.SecurityTools.ToolUI.HomeStud" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row main-content">
+        
+        <div class="col-md-10 column col-md-offset-1" style="margin-top: 30px">
+            <asp:Repeater ID="AnnouncementRepeater" runat="server">
+                <ItemTemplate>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="text-align: left;">
+                            <strong> <%# DataBinder.Eval(Container.DataItem, "Description") %> </strong> (from  <%# DataBinder.Eval(Container.DataItem, "StartDate") %> until  <%# DataBinder.Eval(Container.DataItem, "EndDate") %>)   
+                            <div class="btn-group" style="float:right">
+                                <a href="../Announcements/AnswerAnnouncement.aspx?announcementId=<%# DataBinder.Eval(Container.DataItem, "Id") %>">
+                                    <button class="btn btn-default btn-xs" type="button" >
+                                        Answer
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+
+        </div>
+
         <div class="col-md-4">
             <div class="box">
                 <div class="ribbon ribbon-blue">Information Gathering</div>

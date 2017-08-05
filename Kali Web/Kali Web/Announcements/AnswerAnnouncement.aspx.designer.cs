@@ -7,45 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kali_Web.SecurityTools.ToolUI {
+namespace Kali_Web.Announcements {
     
     
-    public partial class HomeStud {
+    public partial class AnswerAnnouncement {
         
         /// <summary>
-        /// AnnouncementRepeater control.
+        /// AnnouncementDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater AnnouncementRepeater;
+        protected global::System.Web.UI.WebControls.Label AnnouncementDescription;
         
         /// <summary>
-        /// IGA control.
+        /// AnnouncementTextLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl IGA;
+        protected global::System.Web.UI.WebControls.Label AnnouncementTextLabel;
         
         /// <summary>
-        /// VAA control.
+        /// AnswerTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl VAA;
+        protected global::System.Web.UI.WebControls.TextBox AnswerTextBox;
         
         /// <summary>
-        /// PWA control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PWA;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

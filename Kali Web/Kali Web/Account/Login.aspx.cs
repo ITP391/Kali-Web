@@ -45,6 +45,7 @@ namespace Kali_Web.Account
                 string inputemail = TextBox1.Text;
                 string inputpassword = TextBox2.Text;
 
+                String dbId = "";
                 String dbEmail = "";
                 String dbPassword = "";
                 String dbSalt = "";
@@ -65,6 +66,7 @@ namespace Kali_Web.Account
                 //read data from db
                 if (reader.Read())
                 {
+                    dbId = reader["Id"].ToString();
                     dbEmail = reader["Email_Address"].ToString();
                     dbPassword = reader["Password"].ToString();
                     dbSalt = reader["Salt"].ToString();
@@ -84,6 +86,7 @@ namespace Kali_Web.Account
                     String name = dbFName + " " + dbLName;
                     String permission = dbPermission;
 
+                    Session["id"] = dbId;
                     Session["email"] = dbEmail;
                     Session["name"] = name;
                     Session["permission"] = permission;
