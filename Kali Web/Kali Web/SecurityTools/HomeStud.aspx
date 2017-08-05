@@ -59,7 +59,8 @@
             <div class="box twice-box">
                 <div class="ribbon ribbon-orange">Your Progress</div>
                 <br />
-                <div class="box-content">
+                <div class="box-content" id="meter" runat="server" style="background-color:lightgray;width:100%;padding:1px;">
+                   </div>
                     
          <%--           <div class="meter-value" style="background-color: #0a0; width: 3%; text-align:center; margin:auto;">
             <div class="meter-text">
@@ -75,12 +76,12 @@
             <div class="meter-text">
                        66%
                 </div>
-            </div>--%>
+            </div>
                     <div class="meter-value" style="background-color: #0a0; width: 30%; text-align:center; margin:auto;">
             <div class="meter-text">
                        33%
                 </div>
-            </div> 
+            </div> --%>
                     <p class="tool-link"><a href="/SecurityTools/QuizDetails.aspx" class="button" style="left: 0px; top: 0px">Click Here for more</a></p>
                 </div>
             </div>
@@ -94,5 +95,5 @@
             </div>
             </div>
         </div>
-    </div>
+    
 </asp:Content>

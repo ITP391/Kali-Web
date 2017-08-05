@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Kali_Web.Announcements;
+using System.Web.UI.HtmlControls;
 
 namespace Kali_Web.SecurityTools.ToolUI
 {
@@ -78,6 +79,33 @@ namespace Kali_Web.SecurityTools.ToolUI
 
                 AnnouncementRepeater.DataSource = announcementList;
                 AnnouncementRepeater.DataBind();
+            }
+
+            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                string query = "SELECT COUNT(DISTINCT Category) AS Count FROM [QuizzResult] WHERE [UserId] = (SELECT Id FROM [User] WHERE [Email_Address]= @email)";
+                //string query = "SELECT COUNT(DISTINCT Category) AS Count FROM [QuizzResult] WHERE [UserId] = 4";
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                myCommand.CommandType = CommandType.Text;
+                myCommand.Parameters.AddWithValue("@email", sessionemail);
+                myConnection.Open();
+                SqlDataReader reader = myCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    double noOfTest = double.Parse(reader["Count"].ToString());
+                    double percentage = (noOfTest / 3) * 100;
+                    HtmlGenericControl div = new HtmlGenericControl("div");
+                    div.Attributes.Add("id", "bar");
+                    div.Attributes.Add("Style", "background-color: #0a0; width:"+percentage+"% ; text-align:center; text-color:#000;");
+
+                    HtmlGenericControl divTxt = new HtmlGenericControl("div");
+                    divTxt.Attributes.Add("id", "barTxt");
+                    divTxt.InnerHtml = Math.Truncate(percentage) + "%";
+                    divTxt.Attributes.Add("Style", "text=align:center;");
+                    div.Controls.Add(divTxt);
+                    meter.Controls.Add(div);
+                }
             }
         }
     }

@@ -9,16 +9,14 @@ namespace Kali_Web.SecurityTools
 {
     public partial class QuizDetails : System.Web.UI.Page
     {
-        int correct;
-        int totalQues;
-        double result;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (result < 2){
-                grade.Text = "test";
-                percentage.Text = "test%";
-            }
+            TableRow row = new TableRow();
+            TableCell cell1 = new TableCell();
+            cell1.Text = "blah blah blah";
+            row.Cells.Add(cell1);
+            quizTable.Rows.Add(row);
         }
     }
 }
