@@ -37,6 +37,11 @@
                             </span>
                         </div>
 
+                        <asp:Label runat="server" AssociatedControlID="Portinput" CssClass="col-md-2 control-label">Port</asp:Label>
+                        <div class="input-group">
+                            <asp:TextBox runat="server" ID="Portinput" CssClass="form-control" Style="display: inline-block; width: 100%;" />
+                        </div>
+
                         <asp:TextBox ID="Output" runat="server" CssClass="form-control form-textarea" TextMode="MultiLine" Height="252px" Width="" ReadOnly="True"></asp:TextBox>
                     </div>
                 </div>
